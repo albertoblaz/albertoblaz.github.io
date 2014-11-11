@@ -1,0 +1,8 @@
+.section {
+
+}
+
+.container {
+	@extend .columns-9;
+	@extend .auto;
+}
