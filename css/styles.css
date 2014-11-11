@@ -12,7 +12,7 @@ header {
 }
 
 section {
-	height: 600px;
+	height: 100%;
 	/*width: 75%;
 	margin: 0 12.5%;*/
 	width: 80%;
@@ -44,22 +44,22 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .home-container {
-	padding: 10% 0;
+	padding: 17.5% 0;
 }
 
 .home-title {
-	font-size: 5.5em;
+	font-size: 4.5em;
 	margin: 0;
 	padding: 0;
 	float: left;
-	padding-left: 1.25em;
+	padding-left: 3em;
 }
 
 .home-subtitle {
-	font-size: 2.5em;
+	font-size: 2em;
 	margin: 0;
 	float: right;
-	padding-right: 3em;
+	padding-right: 8em;
 }
 
 .links {
@@ -102,6 +102,16 @@ h1,h2,h3,h4,h5,h6 {
 .skill img {
 	width: 128px;
 	height: 128px;
+}
+
+
+/* -------------------------------------   Recommendations   ----------------------------------------- */
+
+.cite {
+	float: left;
+	text-align: justify;
+	padding: 5%;
+	width: 40%;
 }
 
 /* -------------------------------------   Contact   ----------------------------------------- */
