@@ -7,14 +7,21 @@ html, body {
 	max-width: 100%;
 }
 
+html, body,
+ul, ol, li,
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+	padding: 0;
+}
+
+a { text-decoration: none; }
+
 header {
 	display: none;
 }
 
 section {
 	height: 100%;
-	/*width: 75%;
-	margin: 0 12.5%;*/
 	width: 80%;
 	margin: 0 10%;
 }
@@ -27,18 +34,15 @@ figure {
 	clear: both;
 }
 
-
+.hidden {
+	display: none;
+}
 /* -------------------------------------   Home   ----------------------------------------- */
 
-html, body,
-ul, ol, li,
-h1,h2,h3,h4,h5,h6 {
-	margin: 0;
-	padding: 0;
-}
+
 
 .s-title {
-	padding: 1em 0;
+	padding: 1rem 0;
 	text-align: center;
 	font-size: 2.5em;
 }
@@ -105,6 +109,25 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 
+/* -------------------------------------   Projects   ----------------------------------------- */
+.projects {
+	margin: 0;
+	width: 100%;
+	height: 800px;
+}
+
+.projects-figure {
+	/*display: inline-block;*/
+	width: 50%;
+	height: 220px;
+	float: left;
+}
+
+.projects-figure img {
+	height: 100%;
+	width: 100%;
+}
+
 /* -------------------------------------   Recommendations   ----------------------------------------- */
 
 .cite {
@@ -117,7 +140,28 @@ h1,h2,h3,h4,h5,h6 {
 /* -------------------------------------   Contact   ----------------------------------------- */
 
 .contact {
+	text-align: center;
+	margin: 0 auto;
 	height: 420px;
+	width: 65%;
+}
+
+.contact-description {
+	font-size: 2.5em;
+	font-weight: bold;
+	margin: 1em 2em;
+}
+
+.btn-email {
+	background: #CC33B9;
+	color: white;
+	font-size: 1.5rem;
+	border-radius: 5px;
+
+	display: block;
+	margin: 0 auto;
+	padding: 1rem 2rem;
+	width: 8em;
 }
 
 /* -------------------------------------   Footer   ----------------------------------------- */
