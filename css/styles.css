@@ -1,3 +1,5 @@
+/* -------------------------------------   Base   ----------------------------------------- */
+
 html, body {
 	height: 100%;
 	width: 100%;
@@ -5,13 +7,20 @@ html, body {
 	min-width: 100%;
 	max-height: 100%;
 	max-width: 100%;
+	overflow-x: hidden;
 }
 
 html, body,
+article, section, header, footer, div, nav,
 ul, ol, li,
+figure,
 h1,h2,h3,h4,h5,h6 {
 	margin: 0;
 	padding: 0;
+}
+
+ul, ol {
+	list-style: none;
 }
 
 a { text-decoration: none; }
@@ -20,14 +29,19 @@ header {
 	display: none;
 }
 
+/* -------------------------------------   Layout   ----------------------------------------- */
+
 section {
+	margin: 0 auto;
+	padding-bottom: 1em;
 	height: 100%;
-	width: 80%;
-	margin: 0 10%;
+	width: 100%;
 }
 
-figure {
-	margin: 0
+.container {
+	width: 80%;
+	/*margin: 0 10%;*/
+	margin: 1em auto;
 }
 
 .clear {
@@ -37,18 +51,27 @@ figure {
 .hidden {
 	display: none;
 }
-/* -------------------------------------   Home   ----------------------------------------- */
 
-
+.text.center {
+	text-align: center;
+}
 
 .s-title {
-	padding: 1rem 0;
+	padding: 2rem 0;
 	text-align: center;
 	font-size: 2.5em;
 }
 
+.s-subtitle {
+	padding: 2rem 0;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+/* -------------------------------------   Home   ----------------------------------------- */
+
 .home-container {
-	padding: 17.5% 0;
+	padding: 17.5% 6%;
 }
 
 .home-title {
@@ -67,7 +90,7 @@ figure {
 }
 
 .links {
-	padding-top: 1em;
+	padding-top: 2em;
 	text-align: center;
 }
 
@@ -91,6 +114,10 @@ figure {
 
 /* -------------------------------------   Skills   ----------------------------------------- */
 
+/*.skills-list {
+	margin-bottom: 2.5em;
+}*/
+
 .skill {
 	float: left;
 	width: 25%;
@@ -99,33 +126,53 @@ figure {
 }
 
 .skill:first-child,
-.skill:last-child {
+.skill:nth-child(3) {
 	margin: 0;
 }
 
 .skill img {
-	width: 128px;
-	height: 128px;
+	/*width: 128px;
+	height: 128px;*/
+	height: 100px;
 }
 
+.like {
+	display: inline-block;
+	float: left;
+	/*width: 10em;*/
+}
+
+.like {
+	background: #CC33B9;
+	color: white;
+	font-size: 1.25rem;
+	border-radius: 5px;
+	text-align: center;
+
+	margin: 1.5em;
+	margin-top: 0;
+	padding: 0.5rem 1rem;
+	width: 6em;
+}
 
 /* -------------------------------------   Projects   ----------------------------------------- */
 .projects {
+	background-color: rgb(237, 147, 8);
 	margin: 0;
 	width: 100%;
 	height: 800px;
 }
 
 .projects-figure {
-	/*display: inline-block;*/
-	width: 50%;
-	height: 220px;
 	float: left;
+	padding: 0;
+	width: 50%;
 }
 
 .projects-figure img {
-	height: 100%;
 	width: 100%;
+	margin: -2px 0;
+	padding: 0;
 }
 
 /* -------------------------------------   Recommendations   ----------------------------------------- */
@@ -140,16 +187,18 @@ figure {
 /* -------------------------------------   Contact   ----------------------------------------- */
 
 .contact {
+	background-color: rgb(69, 255, 128);
 	text-align: center;
 	margin: 0 auto;
-	height: 420px;
-	width: 65%;
+	height: 425px;
+	width: 100%;
 }
 
 .contact-description {
-	font-size: 2.5em;
+	font-size: 2.25em;
 	font-weight: bold;
-	margin: 1em 2em;
+	margin: 1em 7em;
+	margin-bottom: 1.5em;
 }
 
 .btn-email {
@@ -157,6 +206,7 @@ figure {
 	color: white;
 	font-size: 1.5rem;
 	border-radius: 5px;
+	text-align: center;
 
 	display: block;
 	margin: 0 auto;
@@ -169,7 +219,7 @@ figure {
 .footer {
 	background-color: #333;
 	color: #DDD;
-	height: 200px;
+	height: 220px;
 	text-align: center;
 	/*width: */
 }
