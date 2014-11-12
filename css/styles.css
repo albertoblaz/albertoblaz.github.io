@@ -71,26 +71,22 @@ section {
 /* -------------------------------------   Home   ----------------------------------------- */
 
 .home-container {
+	margin: 0 auto;
 	padding: 17.5% 6%;
+	width: 60%;
+	text-align: center;
 }
 
 .home-title {
 	font-size: 4.5em;
-	margin: 0;
-	padding: 0;
-	float: left;
-	padding-left: 3em;
 }
 
 .home-subtitle {
 	font-size: 2em;
-	margin: 0;
-	float: right;
-	padding-right: 8em;
 }
 
 .links {
-	padding-top: 2em;
+	padding-top: 1em;
 	text-align: center;
 }
 
@@ -110,9 +106,16 @@ section {
 
 /* -------------------------------------   Bio   ----------------------------------------- */
 
+.bio {
+	background-color: rgb(245, 118, 118);
+}
 
 
 /* -------------------------------------   Skills   ----------------------------------------- */
+
+.skills {
+
+}
 
 /*.skills-list {
 	margin-bottom: 2.5em;
@@ -180,8 +183,48 @@ section {
 .cite {
 	float: left;
 	text-align: justify;
-	padding: 5%;
+	padding: 3rem;
+	padding-top: 0;
 	width: 40%;
+}
+
+.cite-pic {
+	float: left;
+}
+
+.cite-pic img {
+	height: 70px;
+	width: 65px;
+	border-radius: 50px;
+}
+
+.cite-block {
+	width: 75%;
+	float: left;
+	padding-left: 0.75em;
+}
+
+.cite-description {
+	font-style: italic;
+	color: #777;
+}
+
+.cite-footer {
+	display: block;
+	float: right;
+}
+
+.cite-author {
+	color: #222;
+	font-weight: bold;
+	display: block;
+	float: right;
+}
+
+.cite-company {
+	display: block;
+	float: right;
+	color: #333;
 }
 
 /* -------------------------------------   Contact   ----------------------------------------- */
@@ -221,7 +264,6 @@ section {
 	color: #DDD;
 	height: 220px;
 	text-align: center;
-	/*width: */
 }
 
 .footer-signature {
