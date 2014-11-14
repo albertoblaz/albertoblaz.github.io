@@ -140,16 +140,58 @@ section {
 
 .bio {
 	background-color: rgb(245, 118, 118);
+	height: 500px;
 }
 
 .bio-picture {
-	width: 40%;
 	float: left;
+	margin-top: 2px;
+	height: 18.5em;
+	width: 40%;
+}
+
+.bio-picture img {
+	height: 100%;
+	width: 100%;
 }
 
 .bio-description {
 	width: 55%;
 	float: right;
+}
+
+.bio-description-text {
+	margin-top: 0;
+	margin-bottom: 1em;
+}
+
+.bio-hobbies {
+	margin-top: 1.5em;
+}
+
+.bio-hobbies-label {
+	color: #333;
+	font-size: 1.15em;
+	font-weight: normal;
+	font-family: sans-serif;
+	margin-bottom: 1em;
+	/*uppercase*/
+}
+
+.bio-hobbies-icons {
+	margin-left: -0.8rem;
+}
+
+.hobbie {
+	color: #333;
+	font-size: 2.5em;
+	margin: 0 0.125em;
+}
+.hobbie:first-child {
+	margin-left: 0;
+}
+.hobbie:last-child {
+	margin-right: 0;
 }
 
 /* -------------------------------------   Skills   --------------------------------- */
