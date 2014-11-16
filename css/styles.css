@@ -102,8 +102,9 @@ section {
 
 .nav-item {
 	display: inline-block;
+	font-size: 1.1em;
 	padding: 1.25em 0;
-	width: 4em;
+	width: 4.5em;
 }
 
 .btn-cv {
@@ -290,13 +291,13 @@ section {
 
 .projects-figure {
 	float: left;
+	margin: -4px 0;
 	padding: 0;
 	width: 50%;
 }
 
 .projects-figure img {
 	width: 100%;
-	margin: -2px 0;
 	padding: 0;
 }
 
@@ -304,7 +305,7 @@ section {
 
 .jobs {
 	float: left;
-	width: 40%
+	width: 48%
 }
 
 .job {
@@ -313,7 +314,7 @@ section {
 
 .cites {
 	float: right;
-	width: 40%;
+	width: 48%;
 }
 
 .job,
@@ -350,8 +351,8 @@ section {
 }
 
 .cite-author {
-	color: #222;
-	font-weight: bold;
+	color: rgba(52, 152, 219,1.0);
+	/*font-size: 1.1em;*/
 	display: block;
 	float: right;
 }
