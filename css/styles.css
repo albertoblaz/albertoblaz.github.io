@@ -83,6 +83,7 @@ section {
 	top: 0;
 	left: 0;
 	right: 0;
+	-webkit-animation: fadeIn 2s 0.25s;
 }
 
 .logo,
@@ -113,7 +114,11 @@ section {
 	color: whitesmoke;
 	padding: 0.75rem 0.5rem;
 	text-align: center;
+
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
 }
+
 
 /* -------------------------------------   Home   ----------------------------------- */
 
@@ -141,6 +146,8 @@ section {
 	padding-top: 1em;
 	text-align: center;
 }
+
+footer .links { padding-top: 2em; }
 
 .link {
 	font-size: 2.5em;
@@ -376,18 +383,48 @@ section {
 	margin-bottom: 1em
 }
 
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+}
+
 .btn-email {
-	background: rgb(61, 67, 115);
+	/*background: rgb(61, 67, 115);*/
+	border-radius: 5px;
+	border: 5px solid rgba(236, 240, 241,1.0);
 	color: rgba(236, 240, 241,1.0);
 	font-size: 1.5rem;
-	border-radius: 5px;
 	text-align: center;
 
 	display: block;
 	margin: 0 auto;
 	padding: 1rem 2rem;
 	width: 12em;
+
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
 }
+
+.btn-cv:hover {
+	background: rgb(61, 67, 115);
+	border: 3px solid rgb(61, 67, 115);
+}
+
+.btn-email:hover {
+	background: rgb(61, 67, 115);
+	border: 5px solid rgb(61, 67, 115);
+}
+
 
 /* ---------------------------------   Footer   ------------------------------------ */
 
