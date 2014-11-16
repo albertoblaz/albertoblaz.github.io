@@ -1,7 +1,7 @@
 /* -------------------------------------   Base   ----------------------------------------- */
 
 * {
-	/*box-sizing: border-box;*/
+	box-sizing: border-box;
 }
 
 html, body {
@@ -19,8 +19,10 @@ article, section, header, footer, div, nav,
 ul, ol, li,
 figure,
 h1,h2,h3,h4,h5,h6 {
+	font-weight: normal;
 	margin: 0;
 	padding: 0;
+	outline: 0;
 }
 
 ul, ol {
@@ -29,19 +31,23 @@ ul, ol {
 
 a { text-decoration: none; }
 
+.vr {
+  border-left: 1px solid #CCC;
+	display: inline-block;
+  height: 100%;
+  width: 1px;
+}
+
 /* -------------------------------------   Layout   ----------------------------------------- */
 
 section {
 	margin: 0 auto;
-	margin-bottom: 1em;
-	height: 100%;
 	width: 100%;
 }
 
-.container {
-	width: 80%;
-	/*margin: 0 10%;*/
-	margin: 1em auto;
+.wrapper {
+	width: 75%;
+	margin: 0 auto;
 }
 
 .clear {
@@ -71,39 +77,49 @@ section {
 /* -------------------------------------   Header  ---------------------------------- */
 
 .header {
-	background-color: #333;
+	background-color: rgba(0,0,0,0.5);
 	color: white;
 	position: fixed;
-	width: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
 }
 
-.header-inner {
-	margin: 0 auto;
-	width: 80%;
-}
-
-.logo {
-	float: left;
+.logo,
+.btn-cv {
+	display: inline-block;
+	width: 12%;
 }
 
 .logo img {
-	height: 100%;
+	/*height: 100%;*/
 }
 
 .nav {
-	float: right;
+	text-align: center;
+	display: inline-block;
 }
 
 .nav-item {
-	box-sizing: border-box;
-	float: left;
-	display: inline;
-	text-align: center;
+	display: inline-block;
 	padding: 1.25em 0;
 	width: 4em;
 }
 
+.btn-cv {
+	border-radius: 3px;
+	border: 3px solid whitesmoke;
+	color: whitesmoke;
+	padding: 0.75rem 0.5rem;
+	text-align: center;
+}
+
 /* -------------------------------------   Home   ----------------------------------- */
+
+.home {
+	background: rgb(61, 67, 115);
+	color: whitesmoke;
+}
 
 .home-container {
 	margin: 0 auto;
@@ -142,18 +158,22 @@ section {
 /* -------------------------------------   Bio   ----------------------------------- */
 
 .bio {
-	background-color: rgb(245, 118, 118);
+	background-color: rgba(44, 62, 80,1.0);
+	color: rgba(236, 240, 241,1.0);
 	height: 500px;
 }
 
 .bio-picture {
+	border-radius: 10px;
 	float: left;
 	margin-top: 2px;
 	height: 18.5em;
 	width: 40%;
 }
 
-.bio-picture img {
+.bio-picture img,
+.bio-picture iframe {
+	border-radius: 10px;
 	height: 100%;
 	width: 100%;
 }
@@ -173,7 +193,7 @@ section {
 }
 
 .bio-hobbies-label {
-	color: #333;
+	/*color: #333;*/
 	font-size: 1.15em;
 	font-weight: normal;
 	font-family: sans-serif;
@@ -186,7 +206,7 @@ section {
 }
 
 .hobbie {
-	color: #333;
+	/*color: #333;*/
 	font-size: 2.5em;
 	margin: 0 0.125em;
 }
@@ -199,28 +219,25 @@ section {
 
 .icon.github {
   font-size: 46px;
-margin-top: 7px;
+	margin-top: 7px;
 }
 
 .tag {
-	height: 66px;
-	width: 66px;
-	display: block;
-	padding-top: 9px;
-	box-sizing: border-box;
 	border: 1px solid black;
 	border-radius: 350px;
+	display: block;
+	padding-top: 9px;
+	height: 66px;
+	width: 66px;
 }
 
 /* -------------------------------------   Skills   --------------------------------- */
 
-.skills {
-
+.skills,
+.contact {
+	background-color: rgba(22, 160, 133,1.0);
+	color: rgba(236, 240, 241,1.0);
 }
-
-/*.skills-list {
-	margin-bottom: 2.5em;
-}*/
 
 .skill {
 	float: left;
@@ -234,37 +251,41 @@ margin-top: 7px;
 	margin: 0;
 }
 
-.skill img {
-	/*width: 128px;
-	height: 128px;*/
-	height: 100px;
+.skill-icon {
+	font-size: 8rem;
 }
 
 .like {
 	display: inline-block;
 	float: left;
-	/*width: 10em;*/
-}
 
-.like {
-	background: #CC33B9;
-	color: white;
-	font-size: 1.25rem;
+	background: rgb(61, 67, 115);
 	border-radius: 5px;
+	color: rgba(236, 240, 241,1.0);
+	font-size: 1.25rem;
 	text-align: center;
 
-	margin: 1.5em;
-	margin-top: 0;
-	padding: 0.5rem 1rem;
-	width: 6em;
+	margin: 0 4%;
+	margin-bottom: 2em;
+	padding: 0.5rem 0;
+	width: 19%;
 }
+
+.like:nth-child(4n+1) {
+	margin-left: 0;
+}
+
+.like:nth-child(4n) {
+	margin-right: 0;
+}
+
 
 
 /* -------------------------------------   Projects   --------------------------------- */
 
-.projects {
-	background-color: rgb(237, 147, 8);
-	height: initial;
+.projects, .exp {
+	background-color: rgba(236, 240, 241,1.0);
+	color: rgba(44, 62, 80,1.0);
 }
 
 .projects-figure {
@@ -279,14 +300,27 @@ margin-top: 7px;
 	padding: 0;
 }
 
-/* -------------------------------   Recommendations   -------------------------------- */
+/* -------------------------------   Experience   -------------------------------- */
 
-.cite {
+.jobs {
 	float: left;
-	text-align: justify;
-	padding: 3rem;
-	padding-top: 0;
+	width: 40%
+}
+
+.job {
+
+}
+
+.cites {
+	float: right;
 	width: 40%;
+}
+
+.job,
+.cite {
+	display: inline-block;
+	margin-bottom: 2rem;
+	text-align: justify;
 }
 
 .cite-pic {
@@ -328,10 +362,10 @@ margin-top: 7px;
 	color: #333;
 }
 
+
 /* ----------------------------------   Contact   ---------------------------------- */
 
 .contact {
-	background-color: rgb(69, 255, 128);
 	text-align: center;
 	margin: 0 auto;
 	height: 390px;
@@ -340,15 +374,14 @@ margin-top: 7px;
 
 .contact-description {
 	font-size: 2.25em;
-	font-weight: bold;
 	margin: 0 4em;
 	margin-top: 0;
 	margin-bottom: 1em
 }
 
 .btn-email {
-	background: #CC33B9;
-	color: white;
+	background: rgb(61, 67, 115);
+	color: rgba(236, 240, 241,1.0);
 	font-size: 1.5rem;
 	border-radius: 5px;
 	text-align: center;
@@ -356,14 +389,15 @@ margin-top: 7px;
 	display: block;
 	margin: 0 auto;
 	padding: 1rem 2rem;
-	width: 8em;
+	width: 12em;
 }
 
 /* ---------------------------------   Footer   ------------------------------------ */
 
 .footer {
-	background-color: #333;
-	color: #DDD;
+	/*background: linear-gradient(#3d3e41,#2e2f31),#3d3e41;*/
+	background: rgb(61, 67, 115);
+	color: rgba(236, 240, 241,1.0);
 	height: 190px;
 	text-align: center;
 }

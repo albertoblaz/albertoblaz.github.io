@@ -11,25 +11,28 @@
 
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<link rel="stylesheet" href="css/fontello.css">
-   <link rel="stylesheet" href="css/animation.css"><!--[if IE 7]><link rel="stylesheet" href="css/fontello-ie7.css"><![endif]-->
+  <link rel="stylesheet" href="css/animation.css"><!--[if IE 7]><link rel="stylesheet" href="css/fontello-ie7.css"><![endif]-->
 </head>
 <body>
 	<header class="header">
-		<div class="header-inner">
-			<figure class="logo">
-				<img src="img/logo.jpg">
-			</figure>
+		<div class="wrapper">
+			<a href="#" class="logo">
+				<figure>
+					<img src="img/logo.jpg">
+				</figure>
+			</a>
 
-			<nav class="nav">
+			<nav class="nav wrapper">
 				<ul>
-					<li class="nav-item">Home</li>
-					<li class="nav-item">Bio</li>
 					<li class="nav-item">Skills</li>
 					<li class="nav-item">Projects</li>
-					<li class="nav-item">Ref</li>
+					<li class="nav-item">Bio</li>
+					<li class="nav-item">Work</li>
 					<li class="nav-item">Contact</li>
 				</ul>
 			</nav>
+
+			<a href="#" class="btn-cv">My Résume</a>
 		</div>
 	</header>
 
@@ -50,45 +53,13 @@
 	</section>
 
 
-	<section class="bio">
-		<h2 class="s-title">Bio</h2>
-
-		<div class="container">
-			<figure class="bio-picture">
-				<img src="img/bio.png" alt="Alberto Blazquez's Bio" title="Alberto Blazquez's Bio">
-			</figure>
-
-			<article class="bio-description">
-				<p class="bio-description-text">Description description Description description Description description Description description Description description Description description Description description Description description Description description Description description Description description Description description Description description Description description Description description Description description Description description Description description Description description Description description</p>
-
-				<p class="bio-description-text">Description description Description description Description description Description description Description description Description description Description description Description description Description description Description description</p>
-
-				<div class="bio-hobbies">
-					<h5 class="bio-hobbies-label">HOBBIES</h5>
-
-					<div class="bio-hobbies-icons">
-						<i class="hobbie icon-note-beamed"></i>
-						<i class="hobbie icon-cinema"></i>
-						<i class="hobbie icon-camera-alt"></i>
-						<i class="hobbie icon-soccer-ball"></i>
-						<i class="hobbie icon-gamepad"></i>
-						<i class="hobbie icon-food"></i>
-						<i class="hobbie icon-users"></i>
-						<!-- <i class="hobbie icon-baseball"></i> -->
-					</div>
-				</div>
-			</article>
-		</div>
-	</section>
-
-
 	<section class="skills">
 		<h2 class="s-title">Skills</h2>
 
-		<div class="container">
+		<div class="wrapper">
 			<article class="skill">
 				<figure>
-					<img src="img/skills/ux.png" alt="User Experience" title="User Experience"/>
+					<div class="skill-icon icon-desktop"></div>
 					<figcaption>
 						<h4>User Experience</h4>
 						<p>Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing</p>
@@ -98,7 +69,7 @@
 
 			<article class="skill">
 				<figure>
-					<img src="img/skills/frontend-dev.png" alt="Frontend Development" title="Frontend Development"/>
+					<div class="skill-icon icon-html5"></div>
 					<figcaption>
 						<h4>Frontend Development</h4>
 						<p>Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing</p>
@@ -108,9 +79,9 @@
 
 			<article class="skill">
 				<figure>
-					<img src="img/skills/backend-dev.png" alt="Backend Development" title="Backend Development"/>
+					<div class="skill-icon icon-sitemap"></div>
 					<figcaption>
-						<h4>Backend Development</h4>
+						<h4>Agile Management</h4>
 						<p>Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing Testing testing</p>
 					</figcaption>
 				</figure>
@@ -119,18 +90,19 @@
 			<div class="clear"></div>
 		</div>
 
-		<div class="container">
+		<div class="wrapper">
 			<h3 class="s-subtitle">Also interested in...</h3>
 
-			<ul class="container">
+			<ul class="wrapper">
 				<li class="like">Functional Programming</li>
 				<li class="like">Software Architectures</li>
-				<li class="like">Design Patterns</li>
+				<li class="like">Design Patterns &amp; Clean Code</li>
 				<li class="like">Internet of Things</li>
 				<li class="like">Functional Programming</li>
 				<li class="like">Software Architectures</li>
-				<li class="like">Design Patterns</li>
+				<li class="like">Design Patterns &amp; Clean Code</li>
 				<li class="like">Internet of Things</li>
+				<li class="clear"></li>
 			</ul>
 		</div>
 	</section>
@@ -199,81 +171,152 @@
 	</section>
 
 
-	<section class="cites">
-		<h2 class="s-title">Recommendations</h2>
+	<section class="bio">
+		<h2 class="s-title">Bio</h2>
 
-		<div class="container">
-			<article class="cite">
-				<figure class="cite-pic">
-					<img src="img/skills/ux.png" />
-				</figure>
+		<div class="wrapper">
+			<!-- <figure class="bio-picture">
+				<img src="img/bio.png" alt="Alberto Blazquez's Bio" title="Alberto Blazquez's Bio">
+			</figure> -->
 
-				<div class="cite-block">
-					<q class="cite-description">Alberto is a very talented person bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</q>
-					<br>
-					<footer class="cite-footer">
-						<a class="cite-author" href="mailto:konstantinos.vandikas@ericsson.com">Konstantinos Vandikas</a>
-						<br>
-						<a class="cite-company" href="http://ericsson.com">Ericsson Research</a>
-					</footer>
+			<figure id="map-canvas" class="bio-picture">
+			</figure>
+
+			<article class="bio-description">
+				<p class="bio-description-text">Description description Description description Description description Description description Description description Description description Description description Description description Description description Description description Description description Description description Description description Description description Description description Description description Description description Description description Description description Description description</p>
+
+				<p class="bio-description-text">Description description Description description Description description Description description Description description Description description Description description Description description Description description Description description</p>
+
+				<div class="bio-hobbies">
+					<h5 class="bio-hobbies-label">HOBBIES</h5>
+
+					<div class="bio-hobbies-icons">
+						<i class="hobbie icon-note-beamed"></i>
+						<i class="hobbie icon-movie"></i>
+						<i class="hobbie icon-camera-alt"></i>
+						<i class="hobbie icon-soccer-ball"></i>
+						<i class="hobbie icon-gamepad"></i>
+						<i class="hobbie icon-food"></i>
+						<i class="hobbie icon-users"></i>
+						<!-- <i class="hobbie icon-baseball"></i> -->
+					</div>
 				</div>
 			</article>
 
-			<article class="cite">
-				<figure class="cite-pic">
-					<img src="img/skills/ux.png" />
-				</figure>
-
-				<div class="cite-block">
-					<q class="cite-description">Alberto is a very talented person bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</q>
-					<br>
-					<footer class="cite-footer">
-						<a class="cite-author" href="mailto:macvaz@tid.es">Miguel Angel Ca&ntilde;as</a>
-						<br>
-						<a class="cite-company" href="http://telefonica.es">Telefonica R+D</a>
-					</footer>
-				</div>
-			</article>
-
-			<article class="cite">
-				<figure class="cite-pic">
-					<img src="img/skills/ux.png" />
-				</figure>
-
-				<div class="cite-block">
-					<q class="cite-description">Alberto is a very talented person bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</q>
-					<br>
-					<footer class="cite-footer">
-						<a class="cite-author" href="mailto:javier.soriano@upm.es">Javier Soriano</a>
-						<br>
-						<a class="cite-company" href="http://www.upm.es"">Technical University of Madrid</a>
-					</footer>
-				</div>
-			</article>
-
-			<article class="cite">
-				<figure class="cite-pic">
-					<img src="img/skills/ux.png" />
-				</figure>
-
-				<div class="cite-block">
-					<q class="cite-description">Alberto is a very talented person bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</q>
-					<br>
-					<footer class="cite-footer">
-						<a class="cite-author" href="mailto:xavier.ferre.grau@upm.es">Xavier Ferr&eacute;</a>
-						<br>
-						<a class="cite-company" href="http://www.upm.es">Technical University of Madrid</a>
-					</footer>
-				</div>
-			</article>
+			<div class="clear"></div>
 		</div>
+	</section>
+
+
+	<section class="exp">
+		<h2 class="s-title">Work</h2>
+
+		<div class="wrapper">
+			<ul class="jobs">
+				<li class="job">
+					<p>Feb 2014 - Dic 2014</p>
+					<p>IoT Developer and Master Thesis</p>
+					<p>Ericsson Research</p>
+				</li>
+
+				<li class="job">
+					<p>Jul 2012 - Jul 2013</p>
+					<p>Web Consultant</p>
+					<p>Telefonica R+D</p>
+				</li>
+
+				<li class="job">
+					<p>Feb 2012 - Jul 2012</p>
+					<p>Web Developer and UX Designer</p>
+					<p>Technical University of Madrid</p>
+				</li>
+
+				<li class="job">
+					<p>Sep 2011 - Feb 2012</p>
+					<p>Java Developer</p>
+					<p>Elecnor Deimos</p>
+				</li>
+			</ul>
+
+			<div class="vr"></div>
+
+			<ul class="cites">
+				<li class="cite">
+					<figure class="cite-pic">
+						<img src="img/skills/ux.png" />
+					</figure>
+
+					<div class="cite-block">
+						<q class="cite-description">Alberto is a very talented person bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</q>
+						<br>
+						<footer class="cite-footer">
+							<a class="cite-author" href="mailto:konstantinos.vandikas@ericsson.com">Konstantinos Vandikas</a>
+							<br>
+							<a class="cite-company" href="http://ericsson.com">Ericsson Research</a>
+						</footer>
+					</div>
+				</li>
+
+				<li class="cite">
+					<figure class="cite-pic">
+						<img src="img/skills/ux.png" />
+					</figure>
+
+					<div class="cite-block">
+						<q class="cite-description">Alberto is a very talented person bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</q>
+						<br>
+						<footer class="cite-footer">
+							<a class="cite-author" href="mailto:macvaz@tid.es">Miguel Angel Ca&ntilde;as</a>
+							<br>
+							<a class="cite-company" href="http://telefonica.es">Telefonica R+D</a>
+						</footer>
+					</div>
+				</li>
+
+				<li class="cite">
+					<figure class="cite-pic">
+						<img src="img/skills/ux.png" />
+					</figure>
+
+					<div class="cite-block">
+						<q class="cite-description">Alberto is a very talented person bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</q>
+						<br>
+						<footer class="cite-footer">
+							<a class="cite-author" href="mailto:javier.soriano@upm.es">Javier Soriano</a>
+							<br>
+							<a class="cite-company" href="http://www.upm.es">Technical University of Madrid</a>
+						</footer>
+					</div>
+				</li>
+
+				<li class="cite">
+					<figure class="cite-pic">
+						<img src="img/skills/ux.png" />
+					</figure>
+
+					<div class="cite-block">
+						<q class="cite-description">Alberto is a very talented person bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</q>
+						<br>
+						<footer class="cite-footer">
+							<a class="cite-author" href="mailto:xavier.ferre.grau@upm.es">Xavier Ferr&eacute;</a>
+							<br>
+							<a class="cite-company" href="http://www.upm.es">Technical University of Madrid</a>
+						</footer>
+					</div>
+				</li>
+			</ul>
+
+			<div class="clear"></div>
+		</div>
+
+		<div class="clear"></div>
 	</section>
 
 
 	<section class="contact">
 		<h2 class="s-title">Contact</h2>
 
-		<div class="container">
+		<div class="wrapper">
 			<p class="contact-description">If you still wanna know more about me, just message me, blablabla blablabla blablabla</p>
 			<a class="btn-email" href="mailto:hola@albertoblazquez.net">Get in Touch!</a>
 		</div>
@@ -299,6 +342,8 @@
 
 	<!-- JavaScript -->
 	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script>
+	<script type="text/javascript" src="js/map.js"></script>
 
 </body>
 </html>
