@@ -31,8 +31,13 @@ ul, ol {
 
 a { text-decoration: none; }
 
+.hr {
+	opacity: 0.5;
+}
+
 .vr {
   border-left: 1px solid #CCC;
+  opacity: 0.5;
 	display: inline-block;
   height: 100%;
   width: 1px;
@@ -50,6 +55,11 @@ section {
 	margin: 0 auto;
 }
 
+.wrapper.double {
+	width: 66.6666%;
+	margin: 0 auto;
+}
+
 .clear {
 	clear: both;
 }
@@ -64,8 +74,11 @@ section {
 
 .s-title {
 	padding: 2rem 0;
-	text-align: center;
+	font-family: sans-serif;
 	font-size: 2.5em;
+	letter-spacing: 2px;
+	text-align: center;
+	text-transform: uppercase;
 }
 
 .s-subtitle {
@@ -102,11 +115,19 @@ section {
 }
 
 .nav-item {
+	font-size: 1em;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+
 	display: inline-block;
-	font-size: 1.1em;
+	margin: 0 0.5em;
 	padding: 1.25em 0;
-	width: 4.5em;
+	width: 6.5em;
 }
+
+.nav-item a { color: white; }
+#nav-bio  { margin-right: -5px; }
+#nav-work { margin: 0; }
 
 .btn-cv {
 	border-radius: 3px;
@@ -128,9 +149,11 @@ section {
 }
 
 .home-container {
-	margin: 0 auto;
+	/*margin: 0 auto;
 	padding: 17.5% 6%;
 	width: 60%;
+	text-align: center;*/
+	padding: 17.5% 0;
 	text-align: center;
 }
 
@@ -249,6 +272,10 @@ footer .links { padding-top: 2em; }
 	text-align: center;
 }
 
+/*.icon-html5 {
+	color: rgb(255, 174, 0);
+}*/
+
 .skill:first-child,
 .skill:nth-child(3) {
 	margin: 0;
@@ -303,67 +330,100 @@ footer .links { padding-top: 2em; }
 	padding: 0;
 }
 
-/* -------------------------------   Experience   -------------------------------- */
+/* -------------------------------   Work   -------------------------------- */
+
+.work .s-title {
+	color: rgba();
+}
 
 .jobs {
 	float: left;
-	width: 40%
+	width: 45%
 }
 
 .job {
 
 }
 
-.cites {
-	float: right;
-	width: 50%;
+.job-header {
+	float: left;
+	margin-bottom: 1rem;
 }
 
-.job,
-.cite {
+.job-position {
+	color: rgb(61, 67, 115);
+	font-size: 1.1rem;
+	font-weight: bold;
+	margin: 0;
+	margin-bottom: 2px;
+}
+
+.company {
+	color: rgb(128, 128, 159);
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.job-description {
+	color: #777;
+}
+
+.job-date {
+	color: rgba(22, 160, 133, 1);
+	line-height: 21px;
+	text-transform: uppercase;
+	float: right;
+	margin: 0;
+}
+
+.job {
 	display: inline-block;
-	margin-bottom: 2rem;
+	margin-bottom: 2.5rem;
 	text-align: justify;
 	width: 100%;
 }
 
-.cite-pic {
-	float: left;
-}
-
-.cite-pic img {
-	height: 40px;
-	width: 40px;
-	border-radius: 50px;
-}
-
-.cite-block {
-	width: 75%;
-	float: left;
-	padding-left: 0.75em;
-}
-
-.cite-description {
-	font-style: italic;
+.ref-description {
 	color: #777;
-}
+	font-size: 1.25rem;
+	font-style: italic;
 
-.cite-footer {
 	display: block;
-	float: right;
+	margin-bottom: 15px;
 }
 
-.cite-author {
+.ref-author {
 	color: rgba(52, 152, 219,1.0);
-	/*font-size: 1.1em;*/
+	font-size: 1.25rem;
 	display: block;
-	float: right;
+	margin-bottom: 5px 0;
 }
 
-.cite-company {
-	display: block;
-	float: right;
-	color: #333;
+.ref-blocks {
+	margin: 2.5rem auto !important;
+}
+
+.ref-pics {
+	text-align: center;
+	margin: 1.5rem 0;
+}
+
+.ref-pic {
+	border-radius: 50px;
+	cursor: pointer;
+	opacity: 0.3;
+	height: 52px;
+	width: 52px;
+	margin: 0 8px;
+	-webkit-transition: all 0.75s;
+	transition: all 0.75s;
+}
+
+.ref-pic.active {
+	opacity: 1;
+	-webkit-transition: all 0.75s;
+	transition: all 0.75s;
 }
 
 
@@ -439,3 +499,4 @@ footer .links { padding-top: 2em; }
 .footer-signature {
 	margin: 2em 0;
 }
+

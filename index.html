@@ -16,7 +16,7 @@
 <body>
 	<header class="header">
 		<div class="wrapper">
-			<a href="#" class="logo">
+			<a class="logo" href="#home">
 				<figure>
 					<img src="img/logo.jpg">
 				</figure>
@@ -24,19 +24,19 @@
 
 			<nav class="nav wrapper">
 				<ul>
-					<li class="nav-item">Skills</li>
-					<li class="nav-item">Projects</li>
-					<li class="nav-item">Bio</li>
-					<li class="nav-item">Work</li>
-					<li class="nav-item">Contact</li>
+					<li class="nav-item"><a href="#skills">Skills</a></li>
+					<li class="nav-item"><a href="#projects">Projects</a></li>
+					<li class="nav-item" id="nav-bio"><a href="#bio">My Bio</a></li>
+					<li class="nav-item" id="nav-work"><a href="#work">Work</a></li>
+					<li class="nav-item"><a href="#contact">Contact</a></li>
 				</ul>
 			</nav>
 
-			<a href="#" class="btn-cv">My R&eacute;sum&eacute;</a>
+			<a class="btn-cv" href="cv/CV_AlbertoBlazquez.pdf" target="_blank">See my CV!</a>
 		</div>
 	</header>
 
-	<section class="home">
+	<section id="home" class="home">
 		<div class="home-container">
 			<!-- <hgroup class="home-titles"> -->
 				<h1 class="home-title">Alberto Blazquez</h1>
@@ -45,15 +45,15 @@
 			<!-- </hgroup> -->
 
 				<div class="links">
-					<a class="link" href="http://github.com/albertoblaz"><i class="icon-github"></i></a>
-					<a class="link" href="http://linkedin.com/albertoblaz"><i class="icon-linkedin"></i></a>
-					<a class="link" href="http://twitter.com/albertoblaz"><i class="icon-twitter"></i></a>
+					<a class="link icon-github"   href="http://github.com/albertoblaz"   target="_blank"></a>
+					<a class="link icon-linkedin" href="http://linkedin.com/albertoblaz" target="_blank"></a>
+					<a class="link icon-twitter"  href="http://twitter.com/albertoblaz"  target="_blank"></a>
 				</div>
 		</div>
 	</section>
 
 
-	<section class="skills">
+	<section id="skills" class="skills">
 		<h2 class="s-title">Skills</h2>
 
 		<div class="wrapper">
@@ -108,7 +108,7 @@
 	</section>
 
 
-	<section class="projects">
+	<section id="projects" class="projects">
 		<h2 class="s-title">Projects</h2>
 
 		<div class="projects-panel">
@@ -171,15 +171,12 @@
 	</section>
 
 
-	<section class="bio">
-		<h2 class="s-title">Bio</h2>
+	<section id="bio" class="bio">
+		<h2 class="s-title">My Bio</h2>
 
 		<div class="wrapper">
-			<!-- <figure class="bio-picture">
-				<img src="img/bio.png" alt="Alberto Blazquez's Bio" title="Alberto Blazquez's Bio">
-			</figure> -->
-
-			<figure id="map-canvas" class="bio-picture">
+			<figure class="bio-picture">
+				<img src="img/map/stockholm-gmap.png" alt="Stockholm" title="Stockholm">
 			</figure>
 
 			<article class="bio-description">
@@ -188,7 +185,7 @@
 				<p class="bio-description-text">Description description Description description Description description Description description Description description Description description Description description Description description Description description Description description</p>
 
 				<div class="bio-hobbies">
-					<h5 class="bio-hobbies-label">HOBBIES</h5>
+					<h5 class="bio-hobbies-label">Things that I love...</h5>
 
 					<div class="bio-hobbies-icons">
 						<i class="hobbie icon-note-beamed"></i>
@@ -198,7 +195,6 @@
 						<i class="hobbie icon-gamepad"></i>
 						<i class="hobbie icon-food"></i>
 						<i class="hobbie icon-users"></i>
-						<!-- <i class="hobbie icon-baseball"></i> -->
 					</div>
 				</div>
 			</article>
@@ -208,112 +204,117 @@
 	</section>
 
 
-	<section class="exp">
+	<section id="work" class="work">
 		<h2 class="s-title">Work</h2>
 
 		<div class="wrapper">
 			<ul class="jobs">
 				<li class="job">
-					<p>Feb 2014 - Dic 2014</p>
-					<p>IoT Developer and Master Thesis</p>
-					<p>Ericsson Research</p>
-				</li>
+					<div class="job-header">
+						<p class="job-position">IoT Developer and Master Thesis</p>
+						<p class="company">Ericsson Research</p>
+					</div>
+					<p class="job-date">Feb 2014 - Dic 2014</p>
+					<div class="clear"></div>
 
-				<li class="job">
-					<p>Jul 2012 - Jul 2013</p>
-					<p>Web Consultant</p>
-					<p>Telefonica R+D</p>
-				</li>
-
-				<li class="job">
-					<p>Feb 2012 - Jul 2012</p>
-					<p>Web Developer and UX Designer</p>
-					<p>Technical University of Madrid</p>
-				</li>
-
-				<li class="job">
-					<p>Sep 2011 - Feb 2012</p>
-					<p>Java Developer</p>
-					<p>Elecnor Deimos</p>
-				</li>
-			</ul>
-
-			<div class="vr"></div>
-
-			<ul class="cites">
-				<li class="cite">
-					<figure class="cite-pic">
-						<img src="img/references/konstantinos-vandikas.jpg" />
-					</figure>
-
-					<div class="cite-block">
-						<q class="cite-description">Alberto is a very talented person bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</q>
-						<br>
-						<footer class="cite-footer">
-							<a class="cite-author" href="mailto:konstantinos.vandikas@ericsson.com">Konstantinos Vandikas</a>
-							<br>
-							<a class="cite-company" href="http://ericsson.com">Ericsson Research</a>
-						</footer>
+					<div class="job-description">
+						Description description Description description Description description Description description Description description Description description Description description
 					</div>
 				</li>
 
-				<li class="cite">
-					<figure class="cite-pic">
-						<img src="img/references/miguel-angel-canas.jpg" />
-					</figure>
+				<li class="job">
+					<div class="job-header">
+						<p class="job-position">Web Consultant</p>
+						<p class="company">Telefonica R+D</p>
+					</div>
+					<p class="job-date">Jul 2012 - Jul 2013</p>
+					<div class="clear"></div>
 
-					<div class="cite-block">
-						<q class="cite-description">Alberto is a very talented person bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</q>
-						<br>
-						<footer class="cite-footer">
-							<a class="cite-author" href="mailto:macvaz@tid.es">Miguel Angel Ca&ntilde;as</a>
-							<br>
-							<a class="cite-company" href="http://telefonica.es">Telefonica R+D</a>
-						</footer>
+					<div class="job-description">
+						Description description Description description Description description Description description Description description Description description Description description
 					</div>
 				</li>
 
-				<li class="cite">
-					<figure class="cite-pic">
-						<img src="img/references/javier-soriano.jpg" />
-					</figure>
+				<li class="job">
+					<div class="job-header">
+						<p class="job-position">Web Developer and UX Designer</p>
+						<p class="company">Technical University of Madrid</p>
+					</div>
+					<p class="job-date">Feb 2012 - Jul 2012</p>
+					<div class="clear"></div>
 
-					<div class="cite-block">
-						<q class="cite-description">Alberto turned out to be a talented technologist and also an excellent and effective communicator, with very clever and well connected ideas. His technical skills and knowledge as well as his interpersonal and soft skills have always been supporting our collaboration. He is someone you definitely want to have in your team if you need innovative ideas and even disruptive thinking</q>
-						<br>
-						<footer class="cite-footer">
-							<a class="cite-author" href="mailto:javier.soriano@upm.es">Javier Soriano</a>
-							<br>
-							<a class="cite-company" href="http://www.upm.es">Technical University of Madrid</a>
-						</footer>
+					<div class="job-description">
+						Description description Description description Description description Description description Description description Description description Description description
 					</div>
 				</li>
 
-				<li class="cite">
-					<figure class="cite-pic">
-						<img src="img/references/xavier-ferre.jpg" />
-					</figure>
+				<li class="job">
+					<div class="job-header">
+						<p class="job-position">Java Developer</p>
+						<p class="company">Elecnor Deimos</p>
+					</div>
+					<p class="job-date">Sep 2011 - Feb 2012</p>
+					<div class="clear"></div>
 
-					<div class="cite-block">
-						<q class="cite-description">During the time Alberto worked under my supervision, in the development of the 2nd version of the Usability Planner tool, I could observe Alberto is a quite responsible person, with great initiative and skills, and he is able to get over any technical challenge</q>
-						<br>
-						<footer class="cite-footer">
-							<a class="cite-author" href="mailto:xavier.ferre.grau@upm.es">Xavier Ferr&eacute;</a>
-							<br>
-							<a class="cite-company" href="http://www.upm.es">Technical University of Madrid</a>
-						</footer>
+					<div class="job-description">
+						Description description Description description Description description Description description Description description Description description Description description
 					</div>
 				</li>
 			</ul>
 
 			<div class="clear"></div>
-		</div>
+			<hr class="hr">
 
-		<div class="clear"></div>
+			<div class="ref-blocks wrapper">
+
+				<div class="ref-block">
+					<q class="ref-description">Alberto is a very talented person bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</q>
+
+					<footer class="text center">
+						<a class="ref-author" href="mailto:konstantinos.vandikas@ericsson.com">Konstantinos Vandikas</a>
+						<a class="company" href="http://ericsson.com" target="_blank">Ericsson Research</a>
+					</footer>
+				</div>
+
+				<div class="ref-block" style="display: none;">
+					<q class="ref-description">Alberto is a very talented person bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</q>
+
+					<footer class="text center">
+						<a class="ref-author" href="mailto:macvaz@tid.es">Miguel Angel Ca&ntilde;as</a>
+						<a class="company" href="http://telefonica.es" target="_blank">Telefonica R+D</a>
+					</footer>
+				</div>
+
+				<div class="ref-block" style="display: none;">
+					<q class="ref-description">Alberto turned out to be a talented technologist and also an excellent and effective communicator, with very clever and well connected ideas. His technical skills and knowledge as well as his interpersonal and soft skills have always been supporting our collaboration. He is someone you definitely want to have in your team if you need innovative ideas and even disruptive thinking</q>
+
+					<footer class="text center">
+						<a class="ref-author" href="mailto:javier.soriano@upm.es">Javier Soriano</a>
+						<a class="company" href="http://www.upm.es" target="_blank">Technical University of Madrid</a>
+					</footer>
+				</div>
+
+				<div class="ref-block" style="display: none;">
+					<q class="ref-description">During the time Alberto worked under my supervision, in the development of the 2nd version of the Usability Planner tool, I could observe Alberto is a quite responsible person, with great initiative and skills, and he is able to get over any technical challenge</q>
+
+					<footer class="text center">
+						<a class="ref-author" href="mailto:xavier.ferre.grau@upm.es">Xavier Ferr&eacute;</a>
+						<a class="company" href="http://www.upm.es" target="_blank">Technical University of Madrid</a>
+					</footer>
+				</div>
+
+				<figure class="ref-pics">
+					<img class="ref-pic active" src="img/references/konstantinos-vandikas.jpg" />
+					<img class="ref-pic" src="img/references/miguel-angel-canas.jpg" />
+					<img class="ref-pic" src="img/references/javier-soriano.jpg" />
+					<img class="ref-pic" src="img/references/xavier-ferre.jpg" />
+				</figure>
+			</div>
+		</div>
 	</section>
 
 
-	<section class="contact">
+	<section id="contact" class="contact">
 		<h2 class="s-title">Contact</h2>
 
 		<div class="wrapper">
@@ -324,21 +325,21 @@
 
 
 	<footer class="footer">
-			<div class="links">
-				<a class="link" href="http://github.com/albertoblaz"><i class="icon-github"></i></a>
-				<a class="link" href="http://linkedin.com/albertoblaz"><i class="icon-linkedin"></i></a>
-				<a class="link" href="http://twitter.com/albertoblaz"><i class="icon-twitter"></i></a>
-			</div>
+		<div class="links">
+			<a class="link icon-github"   href="http://github.com/albertoblaz"   target="_blank"></a>
+			<a class="link icon-linkedin" href="http://linkedin.com/albertoblaz" target="_blank"></a>
+			<a class="link icon-twitter"  href="http://twitter.com/albertoblaz"  target="_blank"></a>
+		</div>
 
-			<p class="footer-signature">Alberto Blazquez, 2014</p>
+		<p class="footer-signature">Alberto Blazquez, 2014</p>
 	</footer>
 
 
 
 	<!-- JavaScript -->
+	<script type="text/javascript" src="initializr/js/vendor/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
-	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script>
-	<script type="text/javascript" src="js/map.js"></script>
+
 
 </body>
 </html>
