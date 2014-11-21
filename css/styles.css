@@ -5,6 +5,7 @@
 }
 
 html, body {
+	font-family: "Trebuchet MS", sans-serif;
 	height: 100%;
 	width: 100%;
 	min-height: 100%;
@@ -84,7 +85,7 @@ section {
 .s-subtitle {
 	padding: 2rem 0;
 	text-align: center;
-	font-size: 1.5em;
+	font-size: 1.25em;
 }
 
 /* -------------------------------------   Header  ---------------------------------- */
@@ -126,8 +127,8 @@ section {
 }
 
 .nav-item a { color: white; }
-#nav-bio  { margin-right: -5px; }
-#nav-work { margin: 0; }
+#nav-bio  { margin: 0; }
+#nav-work { margin-left: -10px; }
 
 .btn-cv {
 	border-radius: 3px;
@@ -177,6 +178,10 @@ footer .links { padding-top: 2em; }
 	color: white;
 	display: inline-block;
 	margin: 0 0.3em;
+}
+
+.link:hover {
+	-webkit-animation: bounce 1s infinite linear;
 }
 
 
@@ -259,6 +264,11 @@ footer .links { padding-top: 2em; }
 
 /* -------------------------------------   Skills   --------------------------------- */
 
+h4 {
+	font-size: 1.35rem;
+	margin-top: 5px;
+}
+
 .skills,
 .contact {
 	background-color: rgba(22, 160, 133,1.0);
@@ -336,17 +346,22 @@ footer .links { padding-top: 2em; }
 	color: rgba();
 }
 
-.jobs {
+.current-job {
 	float: left;
-	width: 45%
+	width: 47.5%;
 }
 
-.job {
-
+.jobs {
+	float: right;
+	width: 47.5%
 }
+
+.jobs .company,
+.current-job .company { float: right; }
+
 
 .job-header {
-	float: left;
+	float: right;
 	margin-bottom: 1rem;
 }
 
@@ -372,8 +387,7 @@ footer .links { padding-top: 2em; }
 .job-date {
 	color: rgba(22, 160, 133, 1);
 	line-height: 21px;
-	text-transform: uppercase;
-	float: right;
+	float: left;
 	margin: 0;
 }
 
@@ -424,6 +438,24 @@ footer .links { padding-top: 2em; }
 	opacity: 1;
 	-webkit-transition: all 0.75s;
 	transition: all 0.75s;
+}
+
+.hr-half {
+    border-bottom: 1px inset #CCC;
+    opacity: 0.5;
+    float: left;
+    height: 1px;
+    width: 48.5%;
+}
+
+.hr-circle {
+    border: 1px solid #CCC;
+    border-radius: 50px;
+    float: left;
+    margin: 0 1%;
+    margin-top: -3px;
+    height: 7px;
+    width: 1%;
 }
 
 
