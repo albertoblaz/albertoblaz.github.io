@@ -342,22 +342,27 @@ h4 {
 
 /* -------------------------------   Work   -------------------------------- */
 
+.timeline {
+	border-left: 2px dotted rgb(61, 67, 115);
+	float: left;
+	height: 23em;
+	width: 25%;
+}
+
 .work .s-title {
 	color: rgba();
 }
 
 .current-job {
-	float: left;
-	width: 47.5%;
+	float: right;
+	width: 70%;
 }
 
 .jobs {
-	float: right;
-	width: 47.5%
+	padding-bottom: 3rem;
 }
 
-.jobs .company,
-.current-job .company { float: right; }
+.jobs .company { float: right; }
 
 
 .job-header {
@@ -375,7 +380,7 @@ h4 {
 
 .company {
 	color: rgb(128, 128, 159);
-	font-size: 0.9rem;
+	font-size: 1rem;
 	text-transform: uppercase;
 	margin: 0;
 }
@@ -387,9 +392,14 @@ h4 {
 .job-date {
 	color: rgba(22, 160, 133, 1);
 	line-height: 21px;
-	float: left;
-	margin: 0;
+	margin: 25% -3px;
+	display: list-item;
+	list-style-type: circle;
+	list-style-position: inside;
 }
+
+.job-date:first-child { margin-top: 5px; }
+.job-date:last-child { margin-bottom: 5px; }
 
 .job {
 	display: inline-block;
@@ -409,7 +419,7 @@ h4 {
 
 .ref-author {
 	color: rgba(52, 152, 219,1.0);
-	font-size: 1.25rem;
+	font-size: 1.3rem;
 	display: block;
 	margin-bottom: 5px 0;
 }
@@ -441,21 +451,21 @@ h4 {
 }
 
 .hr-half {
-    border-bottom: 1px inset #CCC;
-    opacity: 0.5;
-    float: left;
-    height: 1px;
-    width: 48.5%;
+  border-bottom: 1px inset #CCC;
+  opacity: 0.5;
+  float: left;
+  height: 1px;
+  width: 48.5%;
 }
 
 .hr-circle {
-    border: 1px solid #CCC;
-    border-radius: 50px;
-    float: left;
-    margin: 0 1%;
-    margin-top: -3px;
-    height: 7px;
-    width: 1%;
+	border: 1px solid #CCC;
+	border-radius: 50px;
+	float: left;
+	margin: 0 1%;
+	margin-top: -4px;
+	height: 8px;
+	width: 8px;
 }
 
 
