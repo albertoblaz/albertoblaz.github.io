@@ -7,8 +7,20 @@ $(function() {
 	var pics = $('.ref-pic');
 	var refs = $('.ref-block');
 
+	var navItem = $('.nav-item');
+
 
 	/* Handlers */
+	var menuItemHandler = function(event) {
+		event.preventDefault();
+		hash = $(this).children('a')[0].hash;
+
+		$('html').animate(function() {
+			offsetY = $(hash).position.top;
+			console.log(offsetY);
+			window.scrollY = offsetY
+		}, TIME);
+	}
 
 	var refHandler = function(event) {
 		var $this = $(this);
@@ -24,7 +36,10 @@ $(function() {
 		}
 	}
 
-	/*$('body').on('click', pics, refHandler);*/
+
+	/* Event Handlers */
+
 	pics.on('click', refHandler);
+	navItem.on('click', menuItemHandler);
 
 });
