@@ -189,11 +189,25 @@ footer .links { padding-top: 2em; }
 /* -------------------------------------   Bio   ----------------------------------- */
 
 .bio {
-	background-color: rgba(44, 62, 80,1.0);
+	background-color: rgba(52, 73, 94,1.0);
 	color: rgba(236, 240, 241,1.0);
-	height: 500px;
+	height: 600px;
+	/*position: relative;*/
+}
+/*
+.bio iframe {
+	opacity: .25;
+	width: 100%;
+	height: 100%;
 }
 
+.bio .wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+*/
 .bio-picture {
 	border-radius: 10px;
 	float: left;
@@ -202,11 +216,15 @@ footer .links { padding-top: 2em; }
 	width: 40%;
 }
 
-.bio-picture img,
-.bio-picture iframe {
-	border-radius: 10px;
+.bio-picture img {
+	border-radius: 6px;
 	height: 100%;
 	width: 100%;
+}
+
+.bio-caption {
+	text-align: center;
+  padding-top: 5px;
 }
 
 .bio-description {
@@ -216,36 +234,45 @@ footer .links { padding-top: 2em; }
 
 .bio-description-text {
 	margin-top: 0;
-	margin-bottom: 1em;
+	margin-bottom: 2em;
+	line-height: 1.4rem;
+	text-align: justify;
 }
 
 .bio-hobbies {
 	margin-top: 1.5em;
+	text-align: center;
 }
 
 .bio-hobbies-label {
-	/*color: #333;*/
-	font-size: 1.15em;
-	font-weight: normal;
-	font-family: sans-serif;
+	font-family: serif;
+	font-size: 1.5rem;
+	font-style: italic;
 	margin-bottom: 1em;
-	/*uppercase*/
-}
-
-.bio-hobbies-icons {
-	margin-left: -0.8rem;
+	color: rgb(244, 154, 34);
 }
 
 .hobbie {
-	/*color: #333;*/
 	font-size: 2.5em;
-	margin: 0 0.125em;
+	margin: 0 1.25rem;
+	transition: all 1s 2.5s;
 }
+
 .hobbie:first-child {
 	margin-left: 0;
 }
 .hobbie:last-child {
 	margin-right: 0;
+}
+
+.hobbie:hover {
+	color: rgb(244, 154, 34);
+	/*transition-property: background-color, color;
+  transition-duration: 1s;
+  transition-timing-function: ease-out;*/
+	transition: color .5s ease-in, all 1s;
+	/*transition: 3s, 5s, 2s, 1s;*/
+	transform: rotate(360deg);
 }
 
 .icon.github {
@@ -325,7 +352,7 @@ h4 {
 
 .projects, .exp {
 	background-color: rgba(236, 240, 241,1.0);
-	color: rgba(44, 62, 80,1.0);
+	color: rgba(52, 73, 94,1.0);
 }
 
 .projects-figure {
@@ -362,17 +389,17 @@ h4 {
 	padding-bottom: 3rem;
 }
 
-.jobs .company { float: right; }
+.jobs .company { float: left; }
 
 
 .job-header {
-	float: right;
+	float: left;
 	margin-bottom: 1rem;
 }
 
 .job-position {
 	color: rgb(61, 67, 115);
-	font-size: 1.1rem;
+	font-size: 1.5rem;
 	font-weight: bold;
 	margin: 0;
 	margin-bottom: 2px;
@@ -401,11 +428,28 @@ h4 {
 .job-date:first-child { margin-top: 5px; }
 .job-date:last-child { margin-bottom: 5px; }
 
+.job-date.active {
+	color: rgb(61, 67, 115);
+	font-size: 1.5rem;
+}
+
 .job {
 	display: inline-block;
 	margin-bottom: 2.5rem;
 	text-align: justify;
 	width: 100%;
+}
+
+.job-pic {
+	height: 13em;
+}
+
+.job-pic img {
+	float: left;
+	margin-top: 3px;
+	margin-right: 15px;
+	height: 100%;
+	width: 49%;
 }
 
 .ref-description {
