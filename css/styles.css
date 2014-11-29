@@ -190,14 +190,10 @@ footer .links { padding-top: 2em; }
 /* -------------------------------------   Bio   ----------------------------------- */
 
 .bio {
-	/*background-color: rgba(52, 73, 94,1.0);*/
-	/*color: rgba(236, 240, 241, 1.0);*/
-	height: 600px;
 	color: rgb(61, 67, 115);
 }
 
 .bio a {
-	/*color: rgba(48, 197, 140, 1);*/
 	color: rgba(48, 217, 140, 1);
 }
 
@@ -219,16 +215,16 @@ footer .links { padding-top: 2em; }
 }
 
 .bio-description {
+	background: whitesmoke;
 	font-size: 1.5rem;
 	line-height: 2rem;
 	text-align: center;
-
 	margin: 2.5rem auto;
-	max-width: 900px;
+	padding: 2rem 15%;
 }
 
 .bio-hobbies {
-	margin-top: 1.5em;
+	margin: 2.5em;
 	text-align: center;
 }
 
