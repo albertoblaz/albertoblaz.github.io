@@ -131,8 +131,8 @@ section {
 }
 
 .nav-item a { color: white; }
-#nav-bio  { margin: 0; }
-#nav-work { margin-left: -10px; }
+#nav-bio    { margin: 0; }
+#nav-skills { margin-left: 0; }
 
 .btn-cv {
 	border-radius: 3px;
