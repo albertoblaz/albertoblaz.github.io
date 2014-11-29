@@ -12,7 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="css/fontello.css">
   <link rel="stylesheet" type="text/css" href="css/animation.css">
   <link rel="stylesheet" type="text/css" href="css/animation-icons.css">
-  <link rel="stylesheet" type="text/css" href="css/timeline.css">
+  <!-- <link rel="stylesheet" type="text/css" href="css/timeline.css"> -->
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
   <!--[if IE 7]><link rel="stylesheet" href="css/fontello-ie7.css"><![endif]-->
 </head>
@@ -27,10 +27,10 @@
 
 			<nav class="nav wrapper">
 				<ul>
-					<li class="nav-item"><a href="#skills">Skills</a></li>
-					<li class="nav-item"><a href="#projects">Projects</a></li>
 					<li class="nav-item" id="nav-bio"><a href="#bio">Bio</a></li>
-					<li class="nav-item" id="nav-work"><a href="#work">Work</a></li>
+					<li class="nav-item" id="nav-skills"><a href="#skills">Skills</a></li>
+					<li class="nav-item"><a href="#projects">Projects</a></li>
+					<li class="nav-item"><a href="#work">Work</a></li>
 					<li class="nav-item"><a href="#contact">Contact</a></li>
 				</ul>
 			</nav>
@@ -61,7 +61,10 @@
 		<h2 class="s-title">Bio</h2>
 
 		<figure class="bio-picture">
-			<img src="img/map/stockholm.jpg" alt="Stockholm" title="Stockholm">
+			<img src="img/map/alberto.jpg" alt="Stockholm" title="Stockholm">
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+    		<filter id="greyscale"></filter>
+			</svg>
 		</figure>
 
 		<p class="bio-description">I am a HTML5 enthusiast, always wanting to learn the coolest cutting-edge stuff on the web. Born in <a href="http://en.wikipedia.org/wiki/Madrid">Madrid</a>. Currently living in <a href="http://en.wikipedia.org/wiki/Stockholm">Stockholm</a>, working at <a href="https://www.paradoxplaza.com/">Paradox Interactive</a></p>
@@ -122,14 +125,16 @@
 		<div class="wrapper">
 			<h3 class="s-subtitle">Also interested in...</h3>
 
-			<ul class="wrapper">
+			<ul class="wrapper likes">
 				<li class="like">Functional Programming</li>
 				<li class="like">Software Architectures</li>
-				<li class="like">Design Patterns &amp; Clean Code</li>
+				<li class="like">Design Patterns</li>
+				<li class="like">Clean Code</li>
 				<li class="like">Internet of Things</li>
 				<li class="like">Functional Programming</li>
 				<li class="like">Software Architectures</li>
-				<li class="like">Design Patterns &amp; Clean Code</li>
+				<li class="like">Design Patterns</li>
+				<li class="like">Clean Code</li>
 				<li class="like">Internet of Things</li>
 				<li class="clear"></li>
 			</ul>
@@ -142,45 +147,65 @@
 
 		<div>
 			<figure class="projects-figure">
+				<img src="img/projects/iot-framework.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
+				<figcaption>
+				</figcaption>
+			</figure>
+
+			<figure class="projects-figure">
 				<img src="img/projects/webgl-experiments.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
 				<figcaption>
 				</figcaption>
 			</figure>
 
 			<figure class="projects-figure">
+				<img src="img/projects/webgl-benchmarking-tool.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
+				<figcaption>
+				</figcaption>
+			</figure>
+
+			<figure class="projects-figure">
 				<img src="img/projects/scrumptiously.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
-				<!-- <img src="img/projects/webgl-experiments.png" alt="Alberto Blazquez" title="Alberto Blazquez" /> -->
-				<figcaption>
-				</figcaption>
-			</figure>
-
-			<figure class="projects-figure">
-				<img src="img/projects/usability-planner.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
-				<!-- <img src="img/projects/webgl-experiments.png" alt="Alberto Blazquez" title="Alberto Blazquez" /> -->
-				<figcaption>
-				</figcaption>
-			</figure>
-
-			<figure class="projects-figure">
-				<img src="img/projects/captacion-upm.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
-				<!-- <img src="img/projects/webgl-experiments.png" alt="Alberto Blazquez" title="Alberto Blazquez" /> -->
-				<figcaption>
-				</figcaption>
-			</figure>
-
-			<figure class="projects-figure">
-				<img src="img/projects/cssoff.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
-				<!-- <img src="img/projects/webgl-experiments.png" alt="Alberto Blazquez" title="Alberto Blazquez" /> -->
 				<figcaption>
 				</figcaption>
 			</figure>
 
 			<figure class="projects-figure">
 				<img src="img/projects/v2-alberto-blazquez.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
-				<!-- <img src="img/projects/webgl-experiments.png" alt="Alberto Blazquez" title="Alberto Blazquez" /> -->
 				<figcaption>
 				</figcaption>
 			</figure>
+
+			<figure class="projects-figure">
+				<img src="img/projects/usability-planner.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
+				<figcaption>
+				</figcaption>
+			</figure>
+
+			<figure class="projects-figure">
+				<img src="img/projects/lujotar.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
+				<figcaption>
+				</figcaption>
+			</figure>
+
+			<figure class="projects-figure">
+				<img src="img/projects/captacion-upm.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
+				<figcaption>
+				</figcaption>
+			</figure>
+
+			<figure class="projects-figure">
+				<img src="img/projects/cssoff.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
+				<figcaption>
+				</figcaption>
+			</figure>
+
+			<figure class="projects-figure">
+				<img src="img/projects/manuel-blazquez.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
+				<figcaption>
+				</figcaption>
+			</figure>
+
 		</div>
 	</section>
 
