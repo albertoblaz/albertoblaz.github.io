@@ -12,7 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="css/fontello.css">
   <link rel="stylesheet" type="text/css" href="css/animation.css">
   <link rel="stylesheet" type="text/css" href="css/animation-icons.css">
-  <link rel="stylesheet" type="text/css" href="css/timeline.css">
+  <!-- <link rel="stylesheet" type="text/css" href="css/timeline.css"> -->
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
   <!--[if IE 7]><link rel="stylesheet" href="css/fontello-ie7.css"><![endif]-->
 </head>
@@ -25,31 +25,53 @@
 		</a>
 
 		<nav class="nav">
-			<ul>
-				<li class="nav-item"><a href="#skills">Skills</a></li>
-				<li class="nav-item"><a href="#projects">Projects</a></li>
-				<li class="nav-item" id="nav-bio"><a href="#bio">Bio</a></li>
-				<li class="nav-item" id="nav-work"><a href="#work">Work</a></li>
-				<li class="nav-item"><a href="#contact">Contact</a></li>
-			</ul>
+			<a class="nav-item" href="#bio"    id="nav-bio">Bio</a>
+			<a class="nav-item" href="#skills" id="nav-skills">Skills</a>
+			<a class="nav-item" href="#projects">Projects</a>
+			<a class="nav-item" href="#work">Work</a>
+			<a class="nav-item" href="#contact">Contact</a>
 		</nav>
 
 		<a class="btn-cv" href="cv/CV_AlbertoBlazquez.pdf" target="_blank">See my CV!</a>
 	</header>
 
+
 	<section id="home" class="home">
 		<div class="home-container">
-			<!-- <hgroup class="home-titles"> -->
-				<h1 class="home-title">Alberto Blazquez</h1>
-				<h2 class="home-subtitle">Web Developer and UX Designer</h2>
-				<div class="clear"></div>
-			<!-- </hgroup> -->
+			<h1 class="home-title">Alberto Bl&aacute;zquez</h1>
+			<h2 class="home-subtitle">Web Developer and UX Designer</h2>
+			<nav class="links">
+				<a class="link icon-github"   href="http://github.com/albertoblaz"   target="_blank"></a>
+				<a class="link icon-linkedin" href="http://linkedin.com/albertoblaz" target="_blank"></a>
+				<a class="link icon-twitter"  href="http://twitter.com/albertoblaz"  target="_blank"></a>
+			</nav>
+		</div>
+	</section>
 
-				<div class="links">
-					<a class="link icon-github"   href="http://github.com/albertoblaz"   target="_blank"></a>
-					<a class="link icon-linkedin" href="http://linkedin.com/albertoblaz" target="_blank"></a>
-					<a class="link icon-twitter"  href="http://twitter.com/albertoblaz"  target="_blank"></a>
-				</div>
+
+	<section id="bio" class="bio">
+		<h2 class="s-title">Bio</h2>
+
+		<figure class="bio-picture">
+			<img src="img/bio/me.jpg" alt="That's me! Alberto">
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+    		<filter id="greyscale"></filter>
+			</svg>
+		</figure>
+
+		<p class="bio-description">I am a HTML5 enthusiast, always wanting to learn the coolest cutting-edge stuff on the web. Born in <a href="http://en.wikipedia.org/wiki/Madrid">Madrid</a>. Currently living in <a href="http://en.wikipedia.org/wiki/Stockholm">Stockholm</a>, working at <a href="https://www.paradoxplaza.com/">Paradox Interactive</a></p>
+
+		<div class="bio-hobbies">
+			<h5 class="bio-hobbies-label">Rolling stuff that drives me crazy...</h5>
+			<div class="bio-hobbies-icons">
+				<i class="hobbie icon-note-beamed"></i>
+				<i class="hobbie icon-movie"></i>
+				<i class="hobbie icon-camera-alt"></i>
+				<i class="hobbie icon-soccer-ball"></i>
+				<i class="hobbie icon-gamepad"></i>
+				<i class="hobbie icon-food"></i>
+				<i class="hobbie icon-users"></i>
+			</div>
 		</div>
 	</section>
 
@@ -57,7 +79,7 @@
 	<section id="skills" class="skills">
 		<h2 class="s-title">Skills</h2>
 
-		<div class="wrapper">
+		<div class="wrapper skills-panel">
 			<article class="skill">
 				<figure>
 					<div class="skill-icon icon-desktop"></div>
@@ -87,21 +109,21 @@
 					</figcaption>
 				</figure>
 			</article>
-
-			<div class="clear"></div>
 		</div>
 
 		<div class="wrapper">
 			<h3 class="s-subtitle">Also interested in...</h3>
 
-			<ul class="wrapper">
+			<ul class="wrapper likes">
 				<li class="like">Functional Programming</li>
 				<li class="like">Software Architectures</li>
-				<li class="like">Design Patterns &amp; Clean Code</li>
+				<li class="like">Design Patterns</li>
+				<li class="like">Clean Code</li>
 				<li class="like">Internet of Things</li>
 				<li class="like">Functional Programming</li>
 				<li class="like">Software Architectures</li>
-				<li class="like">Design Patterns &amp; Clean Code</li>
+				<li class="like">Design Patterns</li>
+				<li class="like">Clean Code</li>
 				<li class="like">Internet of Things</li>
 				<li class="clear"></li>
 			</ul>
@@ -112,7 +134,13 @@
 	<section id="projects" class="projects">
 		<h2 class="s-title">Projects</h2>
 
-		<div class="projects-panel">
+		<div>
+			<figure class="projects-figure">
+				<img src="img/projects/iot-framework.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
+				<figcaption>
+				</figcaption>
+			</figure>
+
 			<figure class="projects-figure">
 				<img src="img/projects/webgl-experiments.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
 				<figcaption>
@@ -120,41 +148,53 @@
 			</figure>
 
 			<figure class="projects-figure">
-				<!-- <img src="img/projects/scrumptiously.png" alt="Alberto Blazquez" title="Alberto Blazquez" /> -->
-				<img src="img/projects/webgl-experiments.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
+				<img src="img/projects/webgl-benchmarking-tool.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
 				<figcaption>
 				</figcaption>
 			</figure>
 
 			<figure class="projects-figure">
-				<!-- <img src="img/projects/usability-planner.png" alt="Alberto Blazquez" title="Alberto Blazquez" /> -->
-				<img src="img/projects/webgl-experiments.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
+				<img src="img/projects/scrumptiously.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
 				<figcaption>
 				</figcaption>
 			</figure>
 
 			<figure class="projects-figure">
-				<!-- <img src="img/projects/captacion-upm.png" alt="Alberto Blazquez" title="Alberto Blazquez" /> -->
-				<img src="img/projects/webgl-experiments.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
+				<img src="img/projects/v2-alberto-blazquez.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
 				<figcaption>
 				</figcaption>
 			</figure>
 
 			<figure class="projects-figure">
-				<!-- <img src="img/projects/cssoff.png" alt="Alberto Blazquez" title="Alberto Blazquez" /> -->
-				<img src="img/projects/webgl-experiments.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
+				<img src="img/projects/usability-planner.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
 				<figcaption>
 				</figcaption>
 			</figure>
 
 			<figure class="projects-figure">
-				<!-- <img src="img/projects/v2-alberto-blazquez.png" alt="Alberto Blazquez" title="Alberto Blazquez" /> -->
-				<img src="img/projects/webgl-experiments.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
+				<img src="img/projects/lujotar.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
 				<figcaption>
 				</figcaption>
 			</figure>
 
-			<div class="clear"></div>
+			<figure class="projects-figure">
+				<img src="img/projects/captacion-upm.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
+				<figcaption>
+				</figcaption>
+			</figure>
+
+			<figure class="projects-figure">
+				<img src="img/projects/cssoff.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
+				<figcaption>
+				</figcaption>
+			</figure>
+
+			<figure class="projects-figure">
+				<img src="img/projects/manuel-blazquez.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
+				<figcaption>
+				</figcaption>
+			</figure>
+
 		</div>
 	</section>
 
@@ -172,126 +212,9 @@
 	</section>
 
 
-	<section id="bio" class="bio">
-		<!-- <iframe width='100%' height='100%' frameBorder='0' src='https://a.tiles.mapbox.com/v4/albertoblaz.kaccj3i0/attribution.html?access_token=pk.eyJ1IjoiYWxiZXJ0b2JsYXoiLCJhIjoibTBYUUxMayJ9.J82RZIpGLZcBgYUkCDlyGw'></iframe> -->
-
-		<div class="wrapper">
-			<h2 class="s-title">Bio</h2>
-
-			<figure class="bio-picture">
-				<!-- <img src="img/map/stockholm-gmap.png" alt="Stockholm" title="Stockholm"> -->
-				<img src="img/map/stockholm.jpg" alt="Stockholm" title="Stockholm">
-				<!-- <figcaption class="bio-caption">
-					I <span class="icon-heart"></span> Stockholm
-				</figcaption> -->
-			</figure>
-
-			<article class="bio-description">
-				<p class="bio-description-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor</p>
-
-  			<p class="bio-description-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-
-  			<p class="bio-description-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
-			</article>
-
-			<div class="clear"></div>
-
-			<div class="bio-hobbies">
-				<h5 class="bio-hobbies-label">Rolling stuff that drives me crazy...</h5>
-
-				<div class="bio-hobbies-icons">
-					<i class="hobbie icon-note-beamed"></i>
-					<i class="hobbie icon-movie"></i>
-					<i class="hobbie icon-camera-alt"></i>
-					<i class="hobbie icon-soccer-ball"></i>
-					<i class="hobbie icon-gamepad"></i>
-					<i class="hobbie icon-food"></i>
-					<i class="hobbie icon-users"></i>
-				</div>
-			</div>
-		</div>
-	</section>
-
-
 	<section id="work" class="work">
 		<h2 class="s-title">Work</h2>
-<!--
-		<section id="cd-timeline" class="cd-container">
-			<div class="cd-timeline-block">
-				<div class="cd-timeline-img cd-picture">
-					<img src="img/cd-icon-picture.svg" alt="Picture">
-				</div>
 
-				<div class="cd-timeline-content">
-					<h3 class="job-position">Frontend Developer and Digital Strategy</h3>
-					<h4 class="company">Paradox Interactive</h4>
-
-					<p class="job-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-
-					<span class="cd-date">Since Dec 2014</span>
-				</div>
-			</div>
-			<div class="cd-timeline-block">
-				<div class="cd-timeline-img cd-picture">
-					<img src="img/cd-icon-picture.svg" alt="Picture">
-				</div>
-
-				<div class="cd-timeline-content">
-					<h3 class="job-position">IoT Developer</h3>
-					<h4 class="company">Ericsson Research</h4>
-
-					<p class="job-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-
-					<span class="cd-date">Feb 2014</span>
-				</div>
-			</div>
-
-			<div class="cd-timeline-block">
-				<div class="cd-timeline-img cd-picture">
-					<img src="img/cd-icon-picture.svg" alt="Picture">
-				</div>
-
-				<div class="cd-timeline-content">
-					<h3 class="job-position">Web Expert</h3>
-					<h4 class="company">Telefonica R+D</h4>
-
-					<p class="job-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-
-					<span class="cd-date">Jul 2012</span>
-				</div>
-			</div>
-
-			<div class="cd-timeline-block">
-				<div class="cd-timeline-img cd-picture">
-					<img src="img/cd-icon-picture.svg" alt="Picture">
-				</div>
-
-				<div class="cd-timeline-content">
-					<h3 class="job-position">Web Developer and UX Designer</h3>
-					<h4 class="company">Technical University of Madrid</h4>
-
-					<p class="job-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-
-					<span class="cd-date">Feb 2012</span>
-				</div>
-			</div>
-
-			<div class="cd-timeline-block">
-				<div class="cd-timeline-img cd-picture">
-					<img src="img/cd-icon-picture.svg" alt="Picture">
-				</div>
-
-				<div class="cd-timeline-content">
-					<h3 class="job-position">Java Developer</h3>
-					<h4 class="company">Elecnor Deimos</h4>
-
-					<p class="job-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-
-					<span class="cd-date">Sep 2011</span>
-				</div>
-			</div>
-		</section>
- -->
 		<!-- <div class="wrapper jobs">
 			<aside class="timeline">
 				<ul>
@@ -380,7 +303,7 @@
 		<h2 class="s-title">Contact</h2>
 
 		<div class="wrapper">
-			<p class="contact-description">If you still wanna know more about me, just message me, blablabla blablabla blablabla</p>
+			<p class="contact-description">Wanna know more about me? Email me to get to know me better, buddy!</p>
 			<a class="btn-email" href="mailto:hola@albertoblazquez.net">Get in Touch!</a>
 		</div>
 	</section>
