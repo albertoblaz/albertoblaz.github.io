@@ -6,12 +6,6 @@
 
 html, body {
 	font-family: "Trebuchet MS", sans-serif;
-	height: 100%;
-	width: 100%;
-	min-height: 100%;
-	min-width: 100%;
-	max-height: 100%;
-	max-width: 100%;
 }
 
 html, body,
@@ -85,6 +79,10 @@ section {
 	text-transform: uppercase;
 }
 
+.s-title.purple {
+	color: rgb(61, 67, 115);
+}
+
 .s-subtitle {
 	padding: 2rem 0;
 	text-align: center;
@@ -94,20 +92,28 @@ section {
 /* -------------------------------------   Header  ---------------------------------- */
 
 .header {
-	background-color: rgba(0,0,0,0.5);
-	color: white;
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
+	padding: 0 12.5%;
 	z-index: 1000;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	background-color: rgba(0,0,0,0.5);
+	color: white;
 	-webkit-animation: fadeIn 2s 0.25s;
 }
 
-.logo,
-.btn-cv {
-	display: inline-block;
-	width: 12%;
+.logo, .btn-cv {
+	width: 10rem;
+}
+
+.logo {
+	order: 1;
 }
 
 .logo img {
@@ -115,22 +121,26 @@ section {
 }
 
 .nav {
-	text-align: center;
-	display: inline-block;
+	display: flex;
+	order: 2;
+}
+
+.btn-cv {
+	order: 3;
 }
 
 .nav-item {
-	font-size: 1em;
-	letter-spacing: 3px;
-	text-transform: uppercase;
-
-	display: inline-block;
 	margin: 0 0.5em;
 	padding: 1.25em 0;
 	width: 6.5em;
+
+	color: white;
+	font-size: 1em;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	text-align: center;
 }
 
-.nav-item a { color: white; }
 #nav-bio    { margin: 0; }
 #nav-skills { margin-left: 0; }
 
@@ -154,25 +164,31 @@ section {
 }
 
 .home-container {
-	/*margin: 0 auto;
-	padding: 17.5% 6%;
-	width: 60%;
-	text-align: center;*/
-	padding: 17.5% 0;
-	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+
+	line-height: 4rem;
+	margin: 0 auto;
+	width: 90%;
+	height: 660px;
 }
 
 .home-title {
-	font-size: 4.5em;
+	font-size: 5em;
 }
 
 .home-subtitle {
-	font-size: 2em;
+	font-size: 2.25em;
 }
 
 .links {
-	padding-top: 1em;
-	text-align: center;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 15rem;
 }
 
 footer .links { padding-top: 2em; }
@@ -180,13 +196,12 @@ footer .links { padding-top: 2em; }
 .link {
 	font-size: 2.5em;
 	color: white;
-	display: inline-block;
-	margin: 0 0.3em;
 }
 
 .link:hover {
-	/*-webkit-animation: bounce 1s infinite linear;*/
-	transition: scale(1.1) 2s;
+	transform: scale(1.5);
+	transition: all 0.5s;
+	color: rgb(244, 154, 34);
 }
 
 
@@ -207,7 +222,7 @@ footer .links { padding-top: 2em; }
   position: absolute;
   top: 0;
   left: 0;
-  background: url("../img/bio/test.png") no-repeat no-repeat;
+  background: url("../img/bio/test.png") no-repeat no-repeat fixed;
   width: 100%;
   height: 100%;
   opacity : 0.4;
@@ -215,15 +230,18 @@ footer .links { padding-top: 2em; }
 }
 
 .bio a {
+	margin: 0 -4px;
+	padding: 0 4px;
+
+	border-radius: 4px;
 	color: rgba(48, 217, 140, 1);
-	transition: all 1s;
+	transition: all 0.5s;
 }
 
 .bio a:hover {
 	background-color: rgba(48, 217, 140, 1);
 	color: white;
-	border-radius: 4px;
-	transition: all 1s;
+	transition: all 0.5s;
 }
 
 .bio-picture {
@@ -247,7 +265,7 @@ footer .links { padding-top: 2em; }
 }
 
 .bio-description {
-	background: whitesmoke;
+	background: white;
 	font-size: 1.5rem;
 	line-height: 2rem;
 	text-align: center;
@@ -256,23 +274,34 @@ footer .links { padding-top: 2em; }
 }
 
 .bio-hobbies {
-	margin: 2em;
 	text-align: center;
+	margin: 2em;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column nowrap;
 }
 
 .bio-hobbies-label {
+	color: rgb(244, 154, 34);
 	font-family: serif;
 	font-size: 1.5rem;
 	font-style: italic;
 	margin-bottom: 1em;
-	color: rgb(244, 154, 34);
+}
+
+.bio-hobbies-icons {
+	flex-flow: row wrap;
 }
 
 .hobbie {
+	cursor: pointer;
 	font-size: 2.5em;
-	margin: 0 1.25rem;
-	/*transition: color 1s 2s ease-in-out, transform 1s ease-in-out;*/
 	transition: color 1s 1.5s;
+
+	margin: 0 1.25rem;
+	flex: 1;
 }
 
 .hobbie:first-child {
@@ -318,16 +347,21 @@ h4 {
 	color: rgba(236, 240, 241,1.0);
 }
 
-.skill {
-	float: left;
-	width: 25%;
-	margin: 0 12.5%;
-	text-align: center;
+.skills-panel {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: space-around;
+	flex-flow: row wrap;
+	padding: 0 2rem;
+	padding-bottom: 2rem;
 }
 
-.skill:first-child,
-.skill:nth-child(3) {
-	margin: 0;
+.skill {
+	/*flex: 3 1 33%;*/
+	flex: 1;
+	padding: 0 2em;
+	text-align: center;
 }
 
 .skill-icon {
@@ -336,6 +370,8 @@ h4 {
 
 .likes {
 	padding-bottom: 2rem;
+	display: flex;
+	flex-flow: row wrap;
 }
 
 .like {
@@ -364,17 +400,20 @@ h4 {
 	color: rgba(52, 73, 94,1.0);
 }
 
-.projects-figure {
-	/*float: left;
-	margin: -4px 0;
-	padding: 0;
-	width: 50%;*/
-	display: inline-block;
-	padding: 1rem;
-	width: 33%;
+.projects-panel {
+	display: flex;
+	align-content: stretch;
+	align-items: stretch;
+	justify-content: space-around;
+	flex-flow: row wrap;
 }
 
-.projects-figure img {
+.project {
+	padding: 1rem;
+	flex: 3 2 33%;
+}
+
+.project img {
 	border-radius: 4px;
 	padding: 0;
 	width: 100%;
@@ -382,107 +421,59 @@ h4 {
 
 /* -------------------------------   Work   -------------------------------- */
 
-.timeline {
-	border-left: 2px dotted rgb(61, 67, 115);
-	float: left;
-	height: 23em;
-	width: 25%;
-}
-
-.work .s-title {
-	color: rgba();
-}
-
-.current-job {
-	float: right;
-	width: 70%;
-}
-
-.jobs {
-	padding-bottom: 3rem;
-}
-
-.jobs .company { float: left; }
-
-
-.job-header {
-	float: left;
-	margin-bottom: 1rem;
-}
-
-.job-position {
-	color: rgb(61, 67, 115);
-	font-size: 1.5rem;
-	font-weight: bold;
-	margin: 0;
-	margin-bottom: 2px;
-}
-
-.company {
-	color: rgb(128, 128, 159);
-	font-size: 1rem;
-	text-transform: uppercase;
-	margin: 0;
-}
-
-.job-description {
-	color: #777;
-}
-
-.job-date {
-	color: rgba(22, 160, 133, 1);
-	line-height: 21px;
-	margin: 25% -3px;
-	display: list-item;
-	list-style-type: circle;
-	list-style-position: inside;
-}
-
-.job-date:first-child { margin-top: 5px; }
-.job-date:last-child { margin-bottom: 5px; }
-
-.job-date.active {
-	color: rgb(61, 67, 115);
-	font-size: 1.5rem;
-}
-
-.job {
-	display: inline-block;
-	margin-bottom: 2.5rem;
-	text-align: justify;
-	width: 100%;
-}
-
-.job-pic {
-	height: 13em;
-}
-
-.job-pic img {
-	float: left;
-	margin-top: 3px;
-	margin-right: 15px;
-	height: 100%;
-	width: 49%;
-}
-
 .ref-description {
 	color: #777;
-	font-size: 1.25rem;
+	font-size: 1.5rem;
 	font-style: italic;
+	line-height: 1.9rem;
+	text-align: center;
 
 	display: block;
-	margin-bottom: 15px;
+	margin-bottom: 2rem;
+}
+
+.ref-caption {
+	display: flex;
+	flex-flow: column nowrap;
+	align-content: center;
+	align-items: center;
+
+	line-height: 2rem;
 }
 
 .ref-author {
+	padding: 0 5px;
+	border-radius: 5px;
 	color: rgba(52, 152, 219,1.0);
-	font-size: 1.3rem;
-	display: block;
-	margin-bottom: 5px 0;
+	font-size: 1.5rem;
+	transition: all 0.5s;
+}
+
+.ref-author:hover {
+	background-color: rgba(52, 152, 219,1.0);
+	color: white;
+	transition: all 0.5s;
+}
+
+.ref-company {
+	margin: 0;
+	padding: 0 5px;
+
+	border-radius: 5px;
+	color: rgb(128, 128, 159);
+	font-size: 1.1rem;
+	text-transform: uppercase;
+	transition: all 0.5s;
+}
+
+.ref-company:hover {
+	background-color: rgb(128, 128, 159);
+	color: white;
+	transition: all 0.5s;
 }
 
 .ref-blocks {
-	margin: 2.5rem auto !important;
+	padding-bottom: 2rem;
 }
 
 .ref-pics {
@@ -512,7 +503,7 @@ h4 {
   opacity: 0.5;
   float: left;
   height: 1px;
-  width: 48.5%;
+  width: 47.5%;
 }
 
 .hr-circle {
@@ -535,11 +526,14 @@ h4 {
 	width: 100%;
 }
 
-.contact-description {
+.description {
+	margin-bottom: 2em;
+}
+
+.description p {
 	font-size: 2.25em;
 	margin: 0 4em;
 	margin-top: 0;
-	margin-bottom: 1em
 }
 
 @-webkit-keyframes fadeIn {
@@ -575,8 +569,10 @@ h4 {
 }
 
 .btn-cv:hover {
-	background: rgb(61, 67, 115);
-	border: 3px solid rgb(61, 67, 115);
+	/*background: rgb(61, 67, 115);
+	border: 3px solid rgb(61, 67, 115);*/
+	background: rgb(244, 154, 34);
+	border: 3px solid rgb(244, 154, 34);
 }
 
 .btn-email:hover {
@@ -592,10 +588,66 @@ h4 {
 	background: rgb(61, 67, 115);
 	color: rgba(236, 240, 241,1.0);
 	height: 190px;
-	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .footer-signature {
 	margin: 2em 0;
+}
+
+
+
+@media (min-width: 0px) and (max-width: 620px) {
+	.hobbie {
+		flex: 1 0 25%;
+	}
+
+	.skill {
+		flex: 1 1 100%;
+		flex-direction: column;
+		margin: 0;
+	}
+
+	.like {
+		flex: 1 0 100%;
+	}
+
+	.project {
+		flex: 1 0 100%;
+	}
+
+	.ref-blocks {
+		width: 100%;
+	}
+}
+
+
+
+@media (min-width: 620px) and (max-width: 960px) {
+	.skill {
+		flex: 1 1 100%;
+		flex-direction: column;
+		margin: 0 15%;
+	}
+
+	.like {
+		flex: 2 1 45%;
+		flex-flow: row wrap;
+	}
+
+	.project {
+		flex: 2 0 50%;
+	}
+
+	.ref-blocks {
+		width: 100%;
+	}
+}
+
+
+@media (max-width: 750px) {
+
 }
 
