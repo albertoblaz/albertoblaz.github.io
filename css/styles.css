@@ -109,7 +109,7 @@ section {
 }
 
 .logo, .btn-cv {
-	width: 10rem;
+	width: 9rem;
 }
 
 .logo {
@@ -359,7 +359,7 @@ h4 {
 
 .skill {
 	/*flex: 3 1 33%;*/
-	flex: 1;
+	flex: 0 33%;
 	padding: 0 2em;
 	text-align: center;
 }
