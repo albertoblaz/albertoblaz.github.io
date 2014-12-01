@@ -402,15 +402,16 @@ h4 {
 
 .projects-panel {
 	display: flex;
-	align-content: stretch;
+	/*align-content: stretch;
 	align-items: stretch;
-	justify-content: space-around;
+	justify-content: space-around;*/
+	justify-content: space-between;
 	flex-flow: row wrap;
 }
 
 .project {
 	padding: 1rem;
-	flex: 3 2 33%;
+	flex: 0 33%;
 }
 
 .project img {
@@ -601,11 +602,11 @@ h4 {
 
 @media (min-width: 0px) and (max-width: 620px) {
 	.hobbie {
-		flex: 1 0 25%;
+		flex: 0 25%;
 	}
 
 	.skill {
-		flex: 1 1 100%;
+		flex: 1 100%;
 		flex-direction: column;
 		margin: 0;
 	}
@@ -615,7 +616,7 @@ h4 {
 	}
 
 	.project {
-		flex: 1 0 100%;
+		flex: 0 100%;
 	}
 
 	.ref-blocks {
@@ -627,7 +628,7 @@ h4 {
 
 @media (min-width: 620px) and (max-width: 960px) {
 	.skill {
-		flex: 1 1 100%;
+		flex: 1 100%;
 		flex-direction: column;
 		margin: 0 15%;
 	}
@@ -638,7 +639,7 @@ h4 {
 	}
 
 	.project {
-		flex: 2 0 50%;
+		flex: 0 50%;
 	}
 
 	.ref-blocks {
@@ -648,6 +649,9 @@ h4 {
 
 
 @media (max-width: 750px) {
-
+	.hobbie {
+		flex: 0 25%;
+	}
 }
+
 
