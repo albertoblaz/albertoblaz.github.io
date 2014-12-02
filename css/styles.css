@@ -608,7 +608,7 @@ h4 {
 	.skill {
 		flex: 1 100%;
 		flex-direction: column;
-		margin: 0;
+		margin: 0 10%;
 	}
 
 	.like {
@@ -628,14 +628,8 @@ h4 {
 
 @media (min-width: 620px) and (max-width: 960px) {
 	.skill {
-		flex: 1 100%;
+		flex: 0 50%;
 		flex-direction: column;
-		margin: 0 15%;
-	}
-
-	.like {
-		flex: 2 1 45%;
-		flex-flow: row wrap;
 	}
 
 	.project {
