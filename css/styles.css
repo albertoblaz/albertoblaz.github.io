@@ -163,19 +163,6 @@ section {
 	color: whitesmoke;
 }
 
-.home-container {
-	display: flex;
-	flex-direction: column;
-	align-content: center;
-	align-items: center;
-	justify-content: center;
-
-	line-height: 4rem;
-	margin: 0 auto;
-	width: 90%;
-	height: 660px;
-}
-
 .home-title {
 	font-size: 5em;
 }
@@ -255,14 +242,14 @@ footer .links { padding-top: 2em; }
 	height: 100%;
 	width: 100%;
 	z-index: 0;
-	-webkit-filter: grayscale(0.9);
-	transition: all 0.75s;
+	/*-webkit-filter: grayscale(0.9);
+	transition: all 0.75s;*/
 }
 
-.bio-picture img:hover {
+/*.bio-picture img:hover {
 	-webkit-filter: grayscale(0);
 	transition: all 0.75s;
-}
+}*/
 
 .bio-description {
 	background: white;
@@ -293,15 +280,6 @@ footer .links { padding-top: 2em; }
 
 .bio-hobbies-icons {
 	flex-flow: row wrap;
-}
-
-.hobbie {
-	cursor: pointer;
-	font-size: 2.5em;
-	transition: color 1s 1.5s;
-
-	margin: 0 1.25rem;
-	flex: 1;
 }
 
 .hobbie:first-child {
@@ -347,22 +325,12 @@ h4 {
 	color: rgba(236, 240, 241,1.0);
 }
 
-.skills-panel {
-	display: flex;
-	align-content: center;
-	align-items: center;
-	justify-content: space-around;
-	flex-flow: row wrap;
-	padding: 0 2rem;
-	padding-bottom: 2rem;
-}
-
+/*
 .skill {
-	/*flex: 3 1 33%;*/
 	flex: 0 33%;
 	padding: 0 2em;
 	text-align: center;
-}
+}*/
 
 .skill-icon {
 	font-size: 8rem;
@@ -520,13 +488,6 @@ h4 {
 
 /* ----------------------------------   Contact   ---------------------------------- */
 
-.contact {
-	text-align: center;
-	margin: 0 auto;
-	height: 390px;
-	width: 100%;
-}
-
 .description {
 	margin-bottom: 2em;
 }
@@ -598,54 +559,168 @@ h4 {
 	margin: 2em 0;
 }
 
+/* ================================================== */
 
-
-@media (min-width: 0px) and (max-width: 620px) {
-	.hobbie {
-		flex: 0 25%;
-	}
-
-	.skill {
-		flex: 1 100%;
-		flex-direction: column;
-		margin: 0 10%;
-	}
-
-	.like {
-		flex: 1 0 100%;
-	}
-
-	.project {
-		flex: 0 100%;
-	}
-
-	.ref-blocks {
-		width: 100%;
-	}
+section {
+	padding: 1rem 0;
 }
 
-
-
-@media (min-width: 620px) and (max-width: 960px) {
-	.skill {
-		flex: 0 50%;
-		flex-direction: column;
-	}
-
-	.project {
-		flex: 0 50%;
-	}
-
-	.ref-blocks {
-		width: 100%;
-	}
+.s-title {
+	padding: 1rem 0;
+	padding-top: 0;
+	font-family: sans-serif;
+	font-size: 2rem;
+	letter-spacing: 2px;
+	text-align: center;
+	text-transform: uppercase;
 }
 
-
-@media (max-width: 750px) {
-	.hobbie {
-		flex: 0 25%;
-	}
+.home-container {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	line-height: 2.25em;
+	margin: 0 auto;
+	height: 736px;
 }
 
+.home-title {
+	font-size: 2.25em;
+	text-align: center;
+}
 
+.home-subtitle {
+	font-size: 1.25em;
+	text-align: center;
+}
+
+.links {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 14em;
+	padding-top: 0.5em;
+}
+
+.bio-picture {
+	margin: 0.5em auto;
+	width: 130px;
+}
+
+.bio-description {
+	background: white;
+	font-size: 1.35rem;
+	line-height: 2rem;
+	text-align: center;
+	margin: 0;
+	padding: 1em;
+}
+
+.bio-hobbies {
+	text-align: center;
+	margin: 1em;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column nowrap;
+}
+
+.bio-hobbies-label {
+	color: rgb(244, 154, 34);
+	font-family: serif;
+	font-size: 1.35em;
+	font-style: italic;
+	margin-bottom: 1em;
+}
+
+.hobbie {
+	flex: 0 25%;
+	cursor: pointer;
+	font-size: 2.5em;
+	transition: color 1s 1.5s;
+	padding: 0 5px;
+}
+
+.skills-panel {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: space-around;
+	flex-flow: row wrap;
+	padding: 0 2rem;
+}
+
+.skill {
+	flex: 1 100%;
+	flex-direction: column;
+	padding: 1em 0;
+	padding-top: 0;
+	text-align: center;
+}
+
+.project {
+	flex: 0 100%;
+	padding: 1em;
+	padding-top: 0;
+}
+
+.ref-description {
+	color: #777;
+	font-size: 1.35em;
+	font-style: italic;
+	line-height: 2rem;
+	text-align: center;
+	display: block;
+	margin: 0;
+	margin-bottom: 1rem;
+}
+
+.ref-caption {
+	display: flex;
+	flex-flow: column nowrap;
+	align-content: center;
+	align-items: center;
+	line-height: 2rem;
+}
+
+.ref-blocks {
+	padding: 0 1rem;
+}
+
+.ref-pics {
+	text-align: center;
+	margin-top: 1rem;
+}
+
+.contact {
+	padding-bottom: 1.5rem;
+}
+
+.btn-email {
+	border-radius: 5px;
+	border: 5px solid rgba(236, 240, 241,1.0);
+	color: rgba(236, 240, 241,1.0);
+	font-size: 1.5rem;
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+	padding: 1rem 2rem;
+	width: 12em;
+	-webkit-transition: all 0.75s;
+	transition: all 0.75s;
+}
+
+.contact-description {
+	text-align: center;
+	font-size: 1.5rem;
+	line-height: 2rem;
+	margin: 0;
+	margin-bottom: 1rem;
+}
+
+.contact-wrapper {
+	padding: 0 1rem;
+}
