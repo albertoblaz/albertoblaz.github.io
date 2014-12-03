@@ -12,7 +12,8 @@ html, body,
 article, section, header, footer, div, nav,
 ul, ol, li,
 figure,
-h1,h2,h3,h4,h5,h6 {
+h1,h2,h3,h4,h5,h6,
+p {
 	font-weight: normal;
 	margin: 0;
 	padding: 0;
@@ -260,16 +261,6 @@ footer .links { padding-top: 2em; }
 	padding: 2rem 15%;
 }
 
-.bio-hobbies {
-	text-align: center;
-	margin: 2em;
-	display: flex;
-	align-content: center;
-	align-items: center;
-	justify-content: center;
-	flex-flow: column nowrap;
-}
-
 .bio-hobbies-label {
 	color: rgb(244, 154, 34);
 	font-family: serif;
@@ -279,15 +270,21 @@ footer .links { padding-top: 2em; }
 }
 
 .bio-hobbies-icons {
+	display: flex;
 	flex-flow: row wrap;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
 }
 
-.hobbie:first-child {
+/*.hobbie:first-child {
 	margin-left: 0;
 }
 .hobbie:last-child {
 	margin-right: 0;
 }
+*/
 
 .hobbie:hover {
 	color: rgb(244, 154, 34);
@@ -315,8 +312,9 @@ footer .links { padding-top: 2em; }
 /* -------------------------------------   Skills   --------------------------------- */
 
 h4 {
-	font-size: 1.35rem;
+	font-size: 1.5rem;
 	margin-top: 5px;
+	margin-bottom: 10px;
 }
 
 .skills,
@@ -389,17 +387,6 @@ h4 {
 }
 
 /* -------------------------------   Work   -------------------------------- */
-
-.ref-description {
-	color: #777;
-	font-size: 1.5rem;
-	font-style: italic;
-	line-height: 1.9rem;
-	text-align: center;
-
-	display: block;
-	margin-bottom: 2rem;
-}
 
 .ref-caption {
 	display: flex;
@@ -619,13 +606,12 @@ section {
 }
 
 .bio-hobbies {
-	text-align: center;
-	margin: 1em;
 	display: flex;
 	align-content: center;
 	align-items: center;
 	justify-content: center;
 	flex-flow: column nowrap;
+	margin: 1em;
 }
 
 .bio-hobbies-label {
@@ -656,8 +642,9 @@ section {
 .skill {
 	flex: 1 100%;
 	flex-direction: column;
-	padding: 1em 0;
+	padding: 1em 2em;
 	padding-top: 0;
+	font-size: 1.2em;
 	text-align: center;
 }
 
@@ -674,9 +661,13 @@ section {
 	line-height: 2rem;
 	text-align: center;
 	display: block;
-	margin: 0;
+	/*margin: 1rem;
+	margin-top: 0;*/
+	margin: 5%;
+	margin-top: 0;
 	margin-bottom: 1rem;
 }
+
 
 .ref-caption {
 	display: flex;
@@ -723,4 +714,53 @@ section {
 
 .contact-wrapper {
 	padding: 0 1rem;
+}
+
+.header {
+	height: 4rem;
+	padding: 0 1rem;
+}
+
+.nav, .btn-cv {
+	display: none;
+}
+
+.nav-rwd {
+	order: 3;
+	font-size: 1.5rem;
+}
+
+@media (min-width: 670px) {
+	.hobbie {
+		flex: 1;
+		padding: 0 1rem;
+	}
+
+	.skill, .project {
+		flex: 2 50%;
+		padding: 1em;
+	}
+}
+
+@media (min-width: 950px) {
+	.bio-description {
+		/* Keep the description splitted up into 2 lines */
+	}
+}
+
+@media (min-width: 1030px) {
+	.skill {
+		flex: 0 33%;
+	}
+
+	.project {
+		flex: 0 33%;
+		padding: 0.5em;
+	}
+
+	.ref-description {
+		margin: 15%;
+		margin-top: 0;
+		margin-bottom: 1rem;
+	}
 }
