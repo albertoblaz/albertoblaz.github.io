@@ -12,7 +12,8 @@ html, body,
 article, section, header, footer, div, nav,
 ul, ol, li,
 figure,
-h1,h2,h3,h4,h5,h6 {
+h1,h2,h3,h4,h5,h6,
+p {
 	font-weight: normal;
 	margin: 0;
 	padding: 0;
@@ -109,7 +110,7 @@ section {
 }
 
 .logo, .btn-cv {
-	width: 10rem;
+	width: 9rem;
 }
 
 .logo {
@@ -161,19 +162,6 @@ section {
 .home {
 	background: rgb(61, 67, 115);
 	color: whitesmoke;
-}
-
-.home-container {
-	display: flex;
-	flex-direction: column;
-	align-content: center;
-	align-items: center;
-	justify-content: center;
-
-	line-height: 4rem;
-	margin: 0 auto;
-	width: 90%;
-	height: 660px;
 }
 
 .home-title {
@@ -255,14 +243,14 @@ footer .links { padding-top: 2em; }
 	height: 100%;
 	width: 100%;
 	z-index: 0;
-	-webkit-filter: grayscale(0.9);
-	transition: all 0.75s;
+	/*-webkit-filter: grayscale(0.9);
+	transition: all 0.75s;*/
 }
 
-.bio-picture img:hover {
+/*.bio-picture img:hover {
 	-webkit-filter: grayscale(0);
 	transition: all 0.75s;
-}
+}*/
 
 .bio-description {
 	background: white;
@@ -271,16 +259,6 @@ footer .links { padding-top: 2em; }
 	text-align: center;
 	margin: 1.5rem auto;
 	padding: 2rem 15%;
-}
-
-.bio-hobbies {
-	text-align: center;
-	margin: 2em;
-	display: flex;
-	align-content: center;
-	align-items: center;
-	justify-content: center;
-	flex-flow: column nowrap;
 }
 
 .bio-hobbies-label {
@@ -292,24 +270,21 @@ footer .links { padding-top: 2em; }
 }
 
 .bio-hobbies-icons {
+	display: flex;
 	flex-flow: row wrap;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
 }
 
-.hobbie {
-	cursor: pointer;
-	font-size: 2.5em;
-	transition: color 1s 1.5s;
-
-	margin: 0 1.25rem;
-	flex: 1;
-}
-
-.hobbie:first-child {
+/*.hobbie:first-child {
 	margin-left: 0;
 }
 .hobbie:last-child {
 	margin-right: 0;
 }
+*/
 
 .hobbie:hover {
 	color: rgb(244, 154, 34);
@@ -337,8 +312,9 @@ footer .links { padding-top: 2em; }
 /* -------------------------------------   Skills   --------------------------------- */
 
 h4 {
-	font-size: 1.35rem;
+	font-size: 1.5rem;
 	margin-top: 5px;
+	margin-bottom: 10px;
 }
 
 .skills,
@@ -347,22 +323,12 @@ h4 {
 	color: rgba(236, 240, 241,1.0);
 }
 
-.skills-panel {
-	display: flex;
-	align-content: center;
-	align-items: center;
-	justify-content: space-around;
-	flex-flow: row wrap;
-	padding: 0 2rem;
-	padding-bottom: 2rem;
-}
-
+/*
 .skill {
-	/*flex: 3 1 33%;*/
-	flex: 1;
+	flex: 0 33%;
 	padding: 0 2em;
 	text-align: center;
-}
+}*/
 
 .skill-icon {
 	font-size: 8rem;
@@ -402,15 +368,16 @@ h4 {
 
 .projects-panel {
 	display: flex;
-	align-content: stretch;
+	/*align-content: stretch;
 	align-items: stretch;
-	justify-content: space-around;
+	justify-content: space-around;*/
+	justify-content: space-between;
 	flex-flow: row wrap;
 }
 
 .project {
 	padding: 1rem;
-	flex: 3 2 33%;
+	flex: 0 33%;
 }
 
 .project img {
@@ -420,17 +387,6 @@ h4 {
 }
 
 /* -------------------------------   Work   -------------------------------- */
-
-.ref-description {
-	color: #777;
-	font-size: 1.5rem;
-	font-style: italic;
-	line-height: 1.9rem;
-	text-align: center;
-
-	display: block;
-	margin-bottom: 2rem;
-}
 
 .ref-caption {
 	display: flex;
@@ -519,13 +475,6 @@ h4 {
 
 /* ----------------------------------   Contact   ---------------------------------- */
 
-.contact {
-	text-align: center;
-	margin: 0 auto;
-	height: 390px;
-	width: 100%;
-}
-
 .description {
 	margin-bottom: 2em;
 }
@@ -597,57 +546,221 @@ h4 {
 	margin: 2em 0;
 }
 
+/* ================================================== */
+
+section {
+	padding: 1rem 0;
+}
+
+.s-title {
+	padding: 1rem 0;
+	padding-top: 0;
+	font-family: sans-serif;
+	font-size: 2rem;
+	letter-spacing: 2px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.home-container {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	line-height: 2.25em;
+	margin: 0 auto;
+	height: 736px;
+}
+
+.home-title {
+	font-size: 2.25em;
+	text-align: center;
+}
+
+.home-subtitle {
+	font-size: 1.25em;
+	text-align: center;
+}
+
+.links {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 14em;
+	padding-top: 0.5em;
+}
+
+.bio-picture {
+	margin: 0.5em auto;
+	width: 130px;
+}
+
+.bio-description {
+	background: white;
+	font-size: 1.35rem;
+	line-height: 2rem;
+	text-align: center;
+	margin: 0;
+	padding: 1em;
+}
+
+.bio-hobbies {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column nowrap;
+	margin: 1em;
+}
+
+.bio-hobbies-label {
+	color: rgb(244, 154, 34);
+	font-family: serif;
+	font-size: 1.35em;
+	font-style: italic;
+	margin-bottom: 1em;
+}
+
+.hobbie {
+	flex: 0 25%;
+	cursor: pointer;
+	font-size: 2.5em;
+	transition: color 1s 1.5s;
+	padding: 0 5px;
+}
+
+.skills-panel {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: space-around;
+	flex-flow: row wrap;
+	padding: 0 2rem;
+}
+
+.skill {
+	flex: 1 100%;
+	flex-direction: column;
+	padding: 1em 2em;
+	padding-top: 0;
+	font-size: 1.2em;
+	text-align: center;
+}
+
+.project {
+	flex: 0 100%;
+	padding: 1em;
+	padding-top: 0;
+}
+
+.ref-description {
+	color: #777;
+	font-size: 1.35em;
+	font-style: italic;
+	line-height: 2rem;
+	text-align: center;
+	display: block;
+	/*margin: 1rem;
+	margin-top: 0;*/
+	margin: 5%;
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
 
 
-@media (min-width: 0px) and (max-width: 620px) {
+.ref-caption {
+	display: flex;
+	flex-flow: column nowrap;
+	align-content: center;
+	align-items: center;
+	line-height: 2rem;
+}
+
+.ref-blocks {
+	padding: 0 1rem;
+}
+
+.ref-pics {
+	text-align: center;
+	margin-top: 1rem;
+}
+
+.contact {
+	padding-bottom: 1.5rem;
+}
+
+.btn-email {
+	border-radius: 5px;
+	border: 5px solid rgba(236, 240, 241,1.0);
+	color: rgba(236, 240, 241,1.0);
+	font-size: 1.5rem;
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+	padding: 1rem 2rem;
+	width: 12em;
+	-webkit-transition: all 0.75s;
+	transition: all 0.75s;
+}
+
+.contact-description {
+	text-align: center;
+	font-size: 1.5rem;
+	line-height: 2rem;
+	margin: 0;
+	margin-bottom: 1rem;
+}
+
+.contact-wrapper {
+	padding: 0 1rem;
+}
+
+.header {
+	height: 4rem;
+	padding: 0 1rem;
+}
+
+.nav, .btn-cv {
+	display: none;
+}
+
+.nav-rwd {
+	order: 3;
+	font-size: 1.5rem;
+}
+
+@media (min-width: 670px) {
 	.hobbie {
-		flex: 1 0 25%;
+		flex: 1;
+		padding: 0 1rem;
 	}
 
+	.skill, .project {
+		flex: 2 50%;
+		padding: 1em;
+	}
+}
+
+@media (min-width: 950px) {
+	.bio-description {
+		/* Keep the description splitted up into 2 lines */
+	}
+}
+
+@media (min-width: 1030px) {
 	.skill {
-		flex: 1 1 100%;
-		flex-direction: column;
-		margin: 0;
-	}
-
-	.like {
-		flex: 1 0 100%;
+		flex: 0 33%;
 	}
 
 	.project {
-		flex: 1 0 100%;
+		flex: 0 33%;
+		padding: 0.5em;
 	}
 
-	.ref-blocks {
-		width: 100%;
-	}
-}
-
-
-
-@media (min-width: 620px) and (max-width: 960px) {
-	.skill {
-		flex: 1 1 100%;
-		flex-direction: column;
-		margin: 0 15%;
-	}
-
-	.like {
-		flex: 2 1 45%;
-		flex-flow: row wrap;
-	}
-
-	.project {
-		flex: 2 0 50%;
-	}
-
-	.ref-blocks {
-		width: 100%;
+	.ref-description {
+		margin: 15%;
+		margin-top: 0;
+		margin-bottom: 1rem;
 	}
 }
-
-
-@media (max-width: 750px) {
-
-}
-
