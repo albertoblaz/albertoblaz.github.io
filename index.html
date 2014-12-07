@@ -55,7 +55,7 @@
 
 
 	<section id="bio" class="bio">
-		<h2 class="s-title purple">Bio</h2>
+		<h2 class="s-title">Bio</h2>
 
 		<figure class="bio-picture">
 			<img src="img/bio/me.jpg" alt="That's me! Alberto">
@@ -64,7 +64,9 @@
 			</svg>
 		</figure>
 
-		<p class="bio-description">I am a HTML5 enthusiast, always wanting to learn the coolest cutting-edge stuff on the web. Born in <a href="http://en.wikipedia.org/wiki/Madrid">Madrid</a>. Currently living in <a href="http://en.wikipedia.org/wiki/Stockholm">Stockholm</a>, working at <a href="https://www.paradoxplaza.com/">Paradox Interactive</a></p>
+		<div class="bio-description">
+			<p>I am a HTML5 enthusiast, always wanting to learn the coolest cutting-edge stuff on the web. Born in <a href="http://en.wikipedia.org/wiki/Madrid">Madrid</a>. Currently living in <a href="http://en.wikipedia.org/wiki/Stockholm">Stockholm</a>, working at <a href="https://www.paradoxplaza.com/">Paradox Interactive</a></p>
+		</div>
 
 		<div class="bio-hobbies">
 			<h5 class="bio-hobbies-label">Rolling stuff that drives me crazy...</h5>
@@ -137,7 +139,7 @@
 
 
 	<section id="projects" class="projects">
-		<h2 class="s-title purple">Projects</h2>
+		<h2 class="s-title">Projects</h2>
 
 		<div class="projects-panel">
 			<figure class="project">
@@ -218,7 +220,7 @@
 
 
 	<section id="work" class="work">
-		<h2 class="s-title purple">Work</h2>
+		<h2 class="s-title">Work</h2>
 
 		<!-- <div class="wrapper jobs">
 			<aside class="timeline">
@@ -256,7 +258,7 @@
 
 		<div class="ref-blocks">
 			<div class="ref-block">
-				<q class="ref-description">Alberto is a very talented person bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</q>
+				<q class="ref-description">Alberto has performed his tasks and work with considerable care and great interest and it is with pleasure that we recommend him</q>
 
 				<footer class="text center ref-caption">
 					<a class="ref-author" href="mailto:konstantinos.vandikas@ericsson.com">Konstantinos Vandikas</a>
@@ -305,7 +307,10 @@
 		<h2 class="s-title">Contact</h2>
 
 		<div class="contact-wrapper">
-			<p class="contact-description">Wanna know more about me? Just press here and ask whatever you need!</p>
+			<div>
+				<p class="contact-description">Wanna know more about me?</p>
+				<p class="contact-description">Ask whatever you need!</p>
+			</div>
 			<a class="btn-email" href="mailto:hola@albertoblazquez.net">Get in Touch!</a>
 		</div>
 	</section>
@@ -327,7 +332,18 @@
 	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 
+	<script>
+		$('.project').on('click', function() {
+			if ($(this).hasClass('fullscreen')) {
+				$(this).removeClass('fullscreen');
+				/*$('body').css('display', 'block');*/
 
+			} else {
+		    /*$('body').css('display', 'none !important');*/
+	  	  $(this).addClass('fullscreen').css('display', 'block');
+			}
+		});
+	</script>
 </body>
 </html>
 

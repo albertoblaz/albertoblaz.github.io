@@ -72,16 +72,13 @@ section {
 }
 
 .s-title {
+	color: rgb(61, 67, 115);
 	padding: 2rem 0;
 	font-family: sans-serif;
 	font-size: 2.5em;
 	letter-spacing: 2px;
 	text-align: center;
 	text-transform: uppercase;
-}
-
-.s-title.purple {
-	color: rgb(61, 67, 115);
 }
 
 .s-subtitle {
@@ -193,6 +190,7 @@ footer .links { padding-top: 2em; }
 .link {
 	font-size: 2.5em;
 	color: white;
+	transition: all 0.5s;
 }
 
 .link:hover {
@@ -251,20 +249,6 @@ footer .links { padding-top: 2em; }
 	z-index: 0;
 	/*-webkit-filter: grayscale(0.9);
 	transition: all 0.75s;*/
-}
-
-/*.bio-picture img:hover {
-	-webkit-filter: grayscale(0);
-	transition: all 0.75s;
-}*/
-
-.bio-description {
-	background: white;
-	font-size: 1.5rem;
-	line-height: 2rem;
-	text-align: center;
-	margin: 1.5rem auto;
-	padding: 2rem 15%;
 }
 
 .bio-hobbies-label {
@@ -326,35 +310,22 @@ h4 {
 
 .skills,
 .contact {
-	background-color: rgba(22, 185, 133,1.0);
-	color: rgba(236, 240, 241,1.0);
+	/*background-color: rgba(22, 185, 133,1.0);
+	color: rgba(236, 240, 241,1.0);*/
+	color: #666;
 }
 
 .skill-icon {
-	/*font-size: 8rem;*/
-	font-size: 5rem;
+	font-size: 4rem;
 }
 
-.likes {
-	padding-bottom: 2rem;
-	display: flex;
-	flex-flow: row wrap;
+/*
+.icon-webdev {
+  @extend .skill-icon;
+  @extend .icon-html5;
+  color: orange;
 }
-
-.like {
-	background: rgb(61, 67, 115);
-	border-radius: 5px;
-	color: rgba(236, 240, 241,1.0);
-	font-size: 1rem;
-	text-align: center;
-
-	display: inline-block;
-	margin: 0 0.5rem;
-	margin-bottom: 0.5em;
-	padding: 0.5rem 1rem;
-}
-
-
+*/
 
 /* -------------------------------------   Projects   --------------------------------- */
 
@@ -498,11 +469,10 @@ h4 {
           animation-name: fadeIn;
 }
 
-.btn-email {
-	/*background: rgb(61, 67, 115);*/
+/*.btn-email {
 	border-radius: 5px;
-	border: 5px solid rgba(236, 240, 241,1.0);
-	color: rgba(236, 240, 241,1.0);
+	border: 2px solid rgba(22, 185, 133,1.0);
+	color: rgba(22, 185, 133, 1.0);
 	font-size: 1.5rem;
 	text-align: center;
 
@@ -513,7 +483,7 @@ h4 {
 
 	-webkit-transition: all 0.75s;
 	transition: all 0.75s;
-}
+}*/
 
 .btn-cv:hover {
 	/*background: rgb(61, 67, 115);
@@ -523,8 +493,9 @@ h4 {
 }
 
 .btn-email:hover {
-	background: rgb(61, 67, 115);
-	border: 5px solid rgb(61, 67, 115);
+	background: rgba(22, 185, 133,1.0);
+	border: 2px solid rgba(22, 185, 133,1.0);
+	color: white;
 }
 
 
@@ -588,7 +559,7 @@ section {
 	font-size: 1.35rem;
 	line-height: 2rem;
 	text-align: center;
-	margin: 0;
+	margin: 0 auto;
 	padding: 1em;
 }
 
@@ -646,6 +617,7 @@ section {
 	flex: 0 100%;
 	padding: 1em;
 	padding-top: 0;
+	transition: all 1s;
 }
 
 .ref-description {
@@ -686,23 +658,29 @@ section {
 
 .btn-email {
 	border-radius: 5px;
-	border: 5px solid rgba(236, 240, 241,1.0);
-	color: rgba(236, 240, 241,1.0);
+		/*border: 5px solid rgba(236, 240, 241,1.0);*/
+	/*color: rgba(236, 240, 241,1.0);*/
+	border: 2px solid rgba(22, 185, 133,1.0);
+	color: rgba(22, 185, 133, 1.0);
 	font-size: 1.5rem;
 	text-align: center;
 	display: block;
 	margin: 0 auto;
-	padding: 1rem 2rem;
-	width: 12em;
+	padding: 0.75rem;
+	width: 10em;
 	-webkit-transition: all 0.75s;
 	transition: all 0.75s;
 }
 
 .contact-description {
 	text-align: center;
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	line-height: 2rem;
 	margin: 0;
+	margin-bottom: 0.5rem;
+}
+
+.contact-description:last-child {
 	margin-bottom: 1rem;
 }
 
@@ -724,9 +702,15 @@ section {
 	font-size: 1.5rem;
 }
 
+@media (min-width: 360px) {
+	.contact-description {
+		font-size: 1.5rem;
+	}
+}
+
 @media (min-width: 410px) {
 	.skill {
-		flex: 2 50%;
+		flex: 0 50%;
 	}
 }
 
@@ -737,14 +721,16 @@ section {
 	}
 
 	.project {
-		flex: 2 50%;
-		padding: 1em;
+		flex: 0 50%;
+		/*padding: 1em;*/
+		padding: .5em .375em;
+		padding-bottom: 0;
 	}
 }
 
 @media (min-width: 750px) {
 	.skill {
-		flex: 0 29%;
+		flex: 0 31%;
 	}
 
 	.skills-panel {
@@ -760,8 +746,10 @@ section {
 }
 
 @media (min-width: 950px) {
-	.bio-description {
+	.bio-description p {
 		/* Keep the description split up into 2 lines */
+		width: 880px;
+		margin: 0 auto;
 	}
 }
 
@@ -776,4 +764,15 @@ section {
 		margin-top: 0;
 		margin-bottom: 1rem;
 	}
+}
+
+.project.fullscreen {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	display: flex;
+	padding: 0;
+	transition: all 1s;
 }
