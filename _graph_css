@@ -1,0 +1,47 @@
+.graph {
+	width: 40vw;
+	height: 40vw;
+	margin: 0 auto;
+	background: white;
+	border: 2px solid red;
+	border-radius: 100%;
+	position: relative;
+}
+
+.graph-item {
+	display: block;
+	position: relative;
+}
+
+.graph-item.top {
+	top: 0;
+	text-align: center;
+}
+
+.graph-item.middle-left {
+	top: 25%;
+	left: 0%;
+	text-align: right;
+}
+
+.graph-item.middle-right {
+	top: 22.2%;
+}
+
+.graph-item.bottom-left {
+	top: 70%;
+}
+
+.graph-item.bottom-right {
+	top: 56.5%;
+	text-align: right;
+}
+
+.graph-item div {
+	display: inline-block;
+	width: 10em;
+	height: 4em;
+	text-align: center;
+	padding-top: 13px;
+	border-radius: 5px;
+}
