@@ -361,29 +361,28 @@ h4 {
 	padding-bottom: 2rem;
 }
 
-.projects, .exp {
+.projects,
+.exp {
 	background-color: rgba(236, 240, 241,1.0);
 	color: rgba(52, 73, 94,1.0);
 }
 
 .projects-panel {
 	display: flex;
-	/*align-content: stretch;
-	align-items: stretch;
-	justify-content: space-around;*/
-	justify-content: space-between;
-	flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 
 .project {
-	padding: 1rem;
-	flex: 0 33%;
+  padding: 1px 2px;
+	height: calc(50vw / 2.038);
+  width: 50vw;
 }
 
 .project img {
-	border-radius: 4px;
-	padding: 0;
-	width: 100%;
+  width: 100%;
+  height: auto;
+  min-height: 100% !important;
+  border-radius: 2px;
 }
 
 /* -------------------------------   Work   -------------------------------- */
@@ -648,12 +647,6 @@ section {
 	text-align: center;
 }
 
-.project {
-	flex: 0 100%;
-	padding: 1em;
-	padding-top: 0;
-}
-
 .ref-description {
 	color: #777;
 	font-size: 1.35em;
@@ -736,9 +729,14 @@ section {
 		padding: 0 1rem;
 	}
 
-	.skill, .project {
+	.skill {
 		flex: 2 50%;
 		padding: 1em;
+	}
+
+	.project {
+		width: 33.33vw;
+		height: calc(33.33vw / 2.038);
 	}
 }
 
@@ -751,11 +749,6 @@ section {
 @media (min-width: 1030px) {
 	.skill {
 		flex: 0 33%;
-	}
-
-	.project {
-		flex: 0 33%;
-		padding: 0.5em;
 	}
 
 	.ref-description {
