@@ -1,341 +1,93 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!--[if lt IE 9]>
-	<script language="javascript" type="text/javascript" src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+    <!--[if lt IE 9]>
+        <script language="javascript" type="text/javascript" src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-	<!-- meta -->
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-witdh, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-witdh, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
 
-	<title>Alberto Blazquez</title>
+    <title>Alberto Blazquez</title>
 
-	<link rel="stylesheet" type="text/css" href="css/fontello.css">
-  <link rel="stylesheet" type="text/css" href="css/animation.css">
-  <link rel="stylesheet" type="text/css" href="css/animation-icons.css">
-  <!-- <link rel="stylesheet" type="text/css" href="css/timeline.css"> -->
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
-  <!--[if IE 7]><link rel="stylesheet" href="css/fontello-ie7.css"><![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/fontello.css">
+    <link rel="stylesheet" type="text/css" href="css/animation.css">
+    <link rel="stylesheet" type="text/css" href="css/animation-icons.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/timeline.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <!--[if IE 7]><link rel="stylesheet" href="css/fontello-ie7.css"><![endif]-->
 </head>
+
 <body>
-	<header class="header">
-		<a class="logo" href="#home">
-			<figure>
-				<img src="img/logo.jpg">
-			</figure>
-		</a>
+    <div class="home">
+        <div>
+            <h1 class="home__title">Alberto Bl&aacute;zquez</h1>
+            <h2 class="home__subtitle">Software Engineer and Frontend Developer</h2>
+            <p class="home__description">Love Functional Programming, Economics, History, Music, Movies and Videogames</p>
+        </div>
 
-		<nav class="nav">
-			<a class="nav-item" href="#bio" id="nav-bio">Bio</a>
-			<a class="nav-item" href="#skills" id="nav-skills">Skills</a>
-			<a class="nav-item" href="#projects">Projects</a>
-			<a class="nav-item" href="#work">Work</a>
-			<a class="nav-item" href="#contact">Contact</a>
-		</nav>
+        <nav class="home__icons">
+            <a class="home__icon icon-github" href="http://github.com/albertoblaz" target="_blank"></a>
+            <a class="home__icon icon-linkedin" href="http://linkedin.com/albertoblaz" target="_blank"></a>
+            <a class="home__icon icon-twitter" href="http://twitter.com/albertoblaz" target="_blank"></a>
+            <a class="home__icon icon-instagram" href="https://instagram.com/albertoblaz/"></a>
+            <a class="home__icon icon-mail" href="mailto:hola@albertoblazquez.net"></a>
+            <a class="home__link" href="cv/CV_AlbertoBlazquez.pdf" target="_blank">Resume</a>
+        </nav>
 
-		<a class="btn-cv" href="cv/CV_AlbertoBlazquez.pdf" target="_blank">See my CV!</a>
+    </div>
 
-		<nav class="nav-rwd">
-			<i class="icon-heart-empty"></i>
-		</nav>
-	</header>
+    <section class="interests">
+        <ul class="bio-hobbies-icons">
+            <li class="hobbie">
+                <i class="icon-note-beamed"></i>
+                <strong>Music</strong>
+            </li>
+            <li class="hobbie">
+                <i class="icon-movie"></i>
+                <strong>Movies</strong>
+            </li>
+            <li class="hobbie">
+                <i class="icon-camera-alt"></i>
+                <strong>History</strong>
+            </li>
+            <li class="hobbie">
+                <i class="icon-soccer-ball"></i>
+                <strong>Sports</strong>
+            </li>
+            <li class="hobbie">
+                <i class="icon-gamepad"></i>
+                <strong>Videogames</strong>
+            </li>
+            <li class="hobbie">
+                <i class="icon-food"></i>
+                <strong>Cooking</strong>
+            </li>
+            <li class="hobbie">
+                <i class="icon-users"></i>
+                <strong>Economy</strong>
+            </li>
+        </ul>
+    </section>
 
+    <section class="skills">
+        <figure>
+            graph
+        </figure>
 
-	<section id="home" class="home">
-		<div class="home-container">
-			<h1 class="home-title">Alberto Bl&aacute;zquez</h1>
-			<h2 class="home-subtitle">Web Developer and UX Designer</h2>
-			<nav class="links">
-				<a class="link icon-github"   href="http://github.com/albertoblaz"   target="_blank"></a>
-				<a class="link icon-linkedin" href="http://linkedin.com/albertoblaz" target="_blank"></a>
-				<a class="link icon-twitter"  href="http://twitter.com/albertoblaz"  target="_blank"></a>
-			</nav>
-		</div>
-	</section>
+        <ul>
+            <li>Functional Programming</li>
+            <li>Frontend</li>
+            <li>Backend</li>
+            <li>Agile (Kanban and Scrum)</li>
+            <li>UX</li>
+        </ul>
+    </section>
 
-
-	<section id="bio" class="bio">
-		<h2 class="s-title purple">Bio</h2>
-
-		<figure class="bio-picture">
-			<img src="img/bio/me.jpg" alt="That's me! Alberto">
-			<svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-    		<filter id="greyscale"></filter>
-			</svg>
-		</figure>
-
-		<p class="bio-description">HTML5 enthusiast, always wanting to learn the coolest cutting-edge stuff on the web. Born in <a href="http://en.wikipedia.org/wiki/Madrid">Madrid</a>. Currently living in <a href="http://en.wikipedia.org/wiki/Stockholm">Stockholm</a>, working at <a href="https://www.paradoxplaza.com/">Paradox Interactive</a></p>
-
-		<div class="bio-hobbies">
-			<h5 class="bio-hobbies-label">Hobbies</h5>
-			<div class="bio-hobbies-icons">
-				<i class="hobbie icon-note-beamed"></i>
-				<i class="hobbie icon-movie"></i>
-				<i class="hobbie icon-camera-alt"></i>
-				<i class="hobbie icon-soccer-ball"></i>
-				<i class="hobbie icon-gamepad"></i>
-				<i class="hobbie icon-food"></i>
-				<i class="hobbie icon-users"></i>
-			</div>
-		</div>
-	</section>
-
-
-	<section id="skills" class="skills">
-		<h2 class="s-title">Skills</h2>
-
-		<div class="skills-panel">
-			<article class="skill">
-				<figure>
-					<div class="skill-icon icon-desktop"></div>
-					<figcaption>
-						<h4>User Experience</h4>
-						<p>Feel passion designing rich user interactions and observing how users feel and react with my creations</p>
-					</figcaption>
-				</figure>
-			</article>
-
-			<article class="skill">
-				<figure>
-					<div class="skill-icon icon-html5"></div>
-					<figcaption>
-						<h4>Web Development</h4>
-						<p>HTML5 and CSS3 are the bread and butter in my work. JavaScript, Python and Ruby can only make it better</p>
-					</figcaption>
-				</figure>
-			</article>
-
-			<article class="skill">
-				<figure>
-					<div class="skill-icon icon-html5"></div>
-					<figcaption>
-						<h4>Agile Management</h4>
-						<p>Experienced with Kanban and Scrum processes. Able to work with flexibility and get quickly adapted to unexpected changes</p>
-					</figcaption>
-				</figure>
-			</article>
-		</div>
-	</section>
-
-
-	<section id="projects" class="projects">
-		<h2 class="s-title purple">Projects</h2>
-
-		<div class="projects-panel">
-			<figure class="project">
-				<img src="img/projects/stellaris.png" alt="Stellaris" title="Stellaris" />
-				<figcaption>
-				</figcaption>
-			</figure>
-
-			<figure class="project">
-				<img src="img/projects/knights-of-pen-and-paper-2.png" alt="Knights of Pen and Paper 2" title="Knights of Pen and Paper 2" />
-				<figcaption>
-				</figcaption>
-			</figure>
-
-			<figure class="project">
-				<img src="img/projects/hearts-of-iron-iv.png" alt="Hearts of Iron IV" title="Hearts of Iron IV" />
-				<figcaption>
-				</figcaption>
-			</figure>
-
-			<figure class="project">
-				<img src="img/projects/crusader-kings-2.png" alt="Crusader Kings 2" title="Crusader Kings 2" />
-				<figcaption>
-				</figcaption>
-			</figure>
-
-			<figure class="project">
-				<img src="img/projects/cities-skylines.png" alt="Cities: Skylines" title="Cities: Skylines" />
-				<figcaption>
-				</figcaption>
-			</figure>
-
-			<figure class="project">
-				<img src="img/projects/iot-framework.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
-				<figcaption>
-				</figcaption>
-			</figure>
-
-			<figure class="project">
-				<img src="img/projects/webgl-experiments.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
-				<figcaption>
-				</figcaption>
-			</figure>
-
-			<figure class="project">
-				<img src="img/projects/scrumptiously.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
-				<figcaption>
-				</figcaption>
-			</figure>
-
-			<figure class="project">
-				<img src="img/projects/v2-alberto-blazquez.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
-				<figcaption>
-				</figcaption>
-			</figure>
-
-			<figure class="project">
-				<img src="img/projects/usability-planner.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
-				<figcaption>
-				</figcaption>
-			</figure>
-
-			<figure class="project">
-				<img src="img/projects/lujotar.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
-				<figcaption>
-				</figcaption>
-			</figure>
-
-			<figure class="project">
-				<img src="img/projects/captacion-upm.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
-				<figcaption>
-				</figcaption>
-			</figure>
-
-			<figure class="project">
-				<img src="img/projects/cssoff.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
-				<figcaption>
-				</figcaption>
-			</figure>
-
-			<figure class="project">
-				<img src="img/projects/manuel-blazquez.png" alt="Alberto Blazquez" title="Alberto Blazquez" />
-				<figcaption>
-				</figcaption>
-			</figure>
-
-		</div>
-	</section>
-
-
-	<!-- <section class="project hidden">
-		<h2 class="project-title"></h2>
-		<p class="project-description"></p>
-
-		<div class="tags">
-			<h5 class="label">Technologies</h5>
-			<ul class="project-techs">
-				<li class="project-tech"></li>
-			</ul>
-		</div>
-	</section> -->
-
-
-	<section id="work" class="work">
-		<h2 class="s-title purple">Work</h2>
-
-		<!-- <div class="wrapper jobs">
-			<aside class="timeline">
-				<ul>
-					<li class="job-date">Since Dic 2014</li>
-					<li class="job-date">Feb 2014 - Dic 2014</li>
-					<li class="job-date">Jul 2012 - Jul 2013</li>
-					<li class="job-date">Feb 2012 - Jul 2012</li>
-					<li class="job-date">Sep 2011 - Feb 2012</li>
-				</ul>
-			</aside>
-
-			<article class="current-job">
-				<div class="job-header">
-					<p class="job-position">Frontent Developer and Digital Strategy</p>
-					<p class="ref-company">Paradox Interactive</p>
-				</div>
-				<div class="clear"></div>
-
-				<figure style="height: 15em; width: 100%;">
-					<img style="height: 100%; width: 100%;" src="img/work/paradox.png" alt="placeholder" title="placeholder"/>
-					<p>Description description Description description Description description Description description Description description Description description Description description Description description Description description </p>
-				</figure>
-			</article>
-
-			<div class="clear"></div>
-		</div> -->
-
-		<!-- <div class="wrapper">
-    	<div class="hr-half"></div>
-    	<div class="hr-circle"></div>
-    	<div class="hr-half"></div>
-    	<div class="clear"></div>
-		</div> -->
-
-		<div class="ref-blocks">
-			<div class="ref-block">
-				<q class="ref-description">Alberto is a very talented person bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</q>
-
-				<footer class="text center ref-caption">
-					<a class="ref-author" href="mailto:konstantinos.vandikas@ericsson.com">Konstantinos Vandikas</a>
-					<a class="ref-company" href="http://ericsson.com" target="_blank">Ericsson Research</a>
-				</footer>
-			</div>
-
-			<div class="ref-block" style="display: none;">
-				<q class="ref-description">Alberto is a very talented person bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</q>
-
-				<footer class="text center ref-caption">
-					<a class="ref-author" href="mailto:macvaz@tid.es">Miguel Angel Ca&ntilde;as</a>
-					<a class="ref-company" href="http://telefonica.es" target="_blank">Telefonica R+D</a>
-				</footer>
-			</div>
-
-			<div class="ref-block" style="display: none;">
-				<q class="ref-description">Alberto turned out to be a talented technologist and also an excellent and effective communicator, with very clever and well connected ideas. His technical skills and knowledge as well as his interpersonal and soft skills have always been supporting our collaboration. He is someone you definitely want to have in your team if you need innovative ideas and even disruptive thinking</q>
-
-				<footer class="text center ref-caption">
-					<a class="ref-author" href="mailto:javier.soriano@upm.es">Javier Soriano</a>
-					<a class="ref-company" href="http://www.upm.es" target="_blank">Technical University of Madrid</a>
-				</footer>
-			</div>
-
-			<div class="ref-block" style="display: none;">
-				<q class="ref-description">During the time Alberto worked under my guidance, I noticed that he is an intelligent and responsible student. He has a great capacity for initiative, and he is able of taking diverse technical challenges and get out of them successfully. I recommend him for any professional position</q>
-
-				<footer class="text center ref-caption">
-					<a class="ref-author" href="mailto:xavier.ferre.grau@upm.es">Xavier Ferr&eacute;</a>
-					<a class="ref-company" href="http://www.upm.es" target="_blank">Technical University of Madrid</a>
-				</footer>
-			</div>
-
-			<figure class="ref-pics">
-				<img class="ref-pic active" src="img/references/konstantinos-vandikas.jpg" />
-				<img class="ref-pic" src="img/references/miguel-angel-canas.jpg" />
-				<img class="ref-pic" src="img/references/javier-soriano.jpg" />
-				<img class="ref-pic" src="img/references/xavier-ferre.jpg" />
-			</figure>
-		</div>
-	</section>
-
-
-	<section id="contact" class="contact">
-		<h2 class="s-title">Contact</h2>
-
-		<div class="contact-wrapper">
-			<p class="contact-description">Wanna know more about me? Just press here and ask whatever you need!</p>
-			<a class="btn-email" href="mailto:hola@albertoblazquez.net">Get in Touch!</a>
-		</div>
-	</section>
-
-
-	<footer class="footer">
-		<div class="links">
-			<a class="link icon-github"   href="http://github.com/albertoblaz"   target="_blank"></a>
-			<a class="link icon-linkedin" href="http://linkedin.com/albertoblaz" target="_blank"></a>
-			<a class="link icon-twitter"  href="http://twitter.com/albertoblaz"  target="_blank"></a>
-		</div>
-
-		<p class="footer-signature">Alberto Blazquez, 2014</p>
-	</footer>
-
-
-
-	<!-- JavaScript -->
-	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
-
-
+    <!-- JavaScript -->
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
-
