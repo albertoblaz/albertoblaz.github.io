@@ -21,58 +21,86 @@
 </head>
 
 <body>
-    <div class="home">
-        <div>
-            <h1 class="home__title">Alberto Bl&aacute;zquez</h1>
-            <h2 class="home__subtitle">Software Engineer and Frontend Developer</h2>
-            <p class="home__description">Passionate self-taught code-lover. Working in Stockholm, Sweden</p>
+    <!--<section class="cover">
+        <div class="home">
+            <div>
+                <h1 class="home__title">Alberto Bl&aacute;zquez</h1>
+                <h2 class="home__subtitle">Software Engineer and Frontend Developer</h2>
+                <p class="home__description">Passionate self-taught code-lover. Working in Stockholm, Sweden</p>
+            </div>
+
+            <nav class="home__icons">
+                <a class="home__icon icon-github" href="http://github.com/albertoblaz" target="_blank"></a>
+                <a class="home__icon icon-linkedin" href="http://linkedin.com/albertoblaz" target="_blank"></a>
+                <a class="home__icon icon-twitter" href="http://twitter.com/albertoblaz" target="_blank"></a>
+                <a class="home__icon icon-instagram" href="https://instagram.com/albertoblaz/"></a>
+                <a class="home__icon icon-mail" href="mailto:hola@albertoblazquez.net"></a>
+                <a class="home__link" href="cv/CV_AlbertoBlazquez.pdf" target="_blank">Resume</a>
+            </nav>
         </div>
-
-        <nav class="home__icons">
-            <a class="home__icon icon-github" href="http://github.com/albertoblaz" target="_blank"></a>
-            <a class="home__icon icon-linkedin" href="http://linkedin.com/albertoblaz" target="_blank"></a>
-            <a class="home__icon icon-twitter" href="http://twitter.com/albertoblaz" target="_blank"></a>
-            <a class="home__icon icon-instagram" href="https://instagram.com/albertoblaz/"></a>
-            <a class="home__icon icon-mail" href="mailto:hola@albertoblazquez.net"></a>
-            <a class="home__link" href="cv/CV_AlbertoBlazquez.pdf" target="_blank">Resume</a>
-        </nav>
-
-    </div>
+    </section>-->
 
     <section class="interests">
         <h3 class="section-title">Interests</h3>
+
+        <!--<figure class="bar-chart"></figure>-->
+
         <ul class="interests__icons">
             <li class="interest">
-                <i class="interest__icon icon-note-beamed"></i>
+                <!--<i class="interest__icon icon-note-beamed"></i>-->
+                <object class="interest__icon" data="img/svg/music.svg" type="image/svg+xml">
+                    <img src="img/svg/music-fallback.png" alt="music" />
+                </object>
                 <strong class="interest__name">Music</strong>
             </li>
             <li class="interest">
-                <i class="interest__icon icon-movie"></i>
-                <strong class="interest__name">Movies</strong>
+                <!--<i class="interest__icon icon-movie"></i>-->
+                <object class="interest__icon" data="img/svg/movies.svg" type="image/svg+xml">
+                    <img src="img/svg/movies-fallback.png" alt="movies" />
+                </object>
+                <strong class="interest__name">Cinema</strong>
             </li>
             <li class="interest">
-                <i class="interest__icon icon-camera-alt"></i>
+                <!--<i class="interest__icon icon-camera-alt"></i>-->
+                <object class="interest__icon" data="img/svg/history.svg" type="image/svg+xml">
+                    <img src="img/svg/history-fallback.png" alt="history" />
+                </object>
                 <strong class="interest__name">History</strong>
             </li>
             <li class="interest">
-                <i class="interest__icon icon-soccer-ball"></i>
-                <strong class="interest__name">Sports</strong>
+                <!--<i class="interest__icon icon-users"></i>-->
+                <object class="interest__icon" data="img/svg/economy.svg" type="image/svg+xml">
+                    <img src="img/svg/economy-fallback.png" alt="economy" />
+                </object>
+                <strong class="interest__name">Economy</strong>
             </li>
             <li class="interest">
-                <i class="interest__icon icon-gamepad"></i>
+                <!--<i class="interest__icon icon-gamepad"></i>-->
+                <object class="interest__icon" data="img/svg/videogames.svg" type="image/svg+xml">
+                    <img src="img/svg/videogames-fallback.png" alt="videogames" />
+                </object>
                 <strong class="interest__name">Videogames</strong>
             </li>
             <li class="interest">
-                <i class="interest__icon icon-gamepad"></i>
-                <strong class="interest__name">Code</strong>
-            </li>
-            <li class="interest">
-                <i class="interest__icon icon-food"></i>
+                <!--<i class="interest__icon icon-food"></i>-->
+                <object class="interest__icon" data="img/svg/cooking.svg" type="image/svg+xml">
+                    <img src="img/svg/cooking-fallback.png" alt="cooking" />
+                </object>
                 <strong class="interest__name">Cooking</strong>
             </li>
             <li class="interest">
-                <i class="interest__icon icon-users"></i>
-                <strong class="interest__name">Economy</strong>
+                <!--<i class="interest__icon icon-soccer-ball"></i>-->
+                <object class="interest__icon" data="img/svg/sports.svg" type="image/svg+xml">
+                    <img src="img/svg/sports-fallback.png" alt="sports" />
+                </object>
+                <strong class="interest__name">Sports</strong>
+            </li>
+            <li class="interest">
+                <!--<i class="interest__icon icon-gamepad"></i>-->
+                <object class="interest__icon" data="img/svg/code.svg" type="image/svg+xml">
+                    <img src="img/svg/code-fallback.png" alt="code" />
+                </object>
+                <strong class="interest__name">Code</strong>
             </li>
         </ul>
     </section>
@@ -80,14 +108,14 @@
     <section class="skills">
         <h3 class="section-title">Skills</h3>
         <figure class="radar-chart"></figure>
+    </section>
 
-        <!--<ul>
-            <li>Functional Programming</li>
-            <li>Frontend</li>
-            <li>Backend</li>
-            <li>Agile (Kanban and Scrum)</li>
-            <li>UX</li>
-        </ul>-->
+    <section class="experience">
+        <h3 class="section-title">Experience</h3>
+        <svg class="progress" width="120" height="120" viewBox="0 0 120 120">
+            <circle class="progress__meter" cx="60" cy="60" r="54" stroke-width="12" />
+            <circle class="progress__value" cx="60" cy="60" r="54" stroke-width="12" />
+        </svg>
     </section>
 
     <!-- JavaScript -->
@@ -96,6 +124,7 @@
 
     <script type="text/javascript" src="node_modules/d3/build/d3.min.js"></script>
     <script type="text/javascript" src="js/radar-chart.js"></script>
+    <!--<script type="text/javascript" src="js/bar-chart.js"></script>-->
 
     <script>
         const margin = {
@@ -108,12 +137,12 @@
         const h = Math.min(w, window.innerHeight - margin.top - margin.bottom - 20)
 
         const data = [[
-            { axis: "Frontend", value: 0.95 },
-            { axis: "Backend", value: 0.58 },
-            { axis: "Agile (Kanban and Scrum)", value: 0.81 },
-            { axis: "User Experience", value: 0.78 },
-            { axis: "Mobile Development", value: 0.32 },
+            { axis: "Frontend", value: 1 },
+            { axis: "Backend", value: 0.68 },
+            { axis: "Mobile Apps", value: 0.33 },
             { axis: "Functional Programming", value: 0.83 },
+            { axis: "Lean & Agile", value: 0.81 },
+            { axis: "UX Design", value: 0.78 },
         ]]
 
         const color = d3.scaleOrdinal([ '#EDC951', '#CC333F', '#00A0B0' ])
