@@ -242,25 +242,44 @@ body {
 			font-size: 14px;
 		}*/
 
-.progress {
+.experience {
+    height: 66vh;
+    flex: 1 auto;
+    order: 2;
+
+    text-align: right;
 	animation: 1s ease-in-out forwards show-section--right;
 }
 
-.progress__meter,
-.progress__value {
-    fill: none;
-}
+	.radial-chart {
+		margin: 20px;
+	}
 
-.progress__meter {
-    stroke: #e6e6e6;
-}
+		.progress__meter,
+		.progress__value {
+			fill: none;
+			stroke-width: 8;
+		}
 
-.progress__value {
-	stroke: #fdca73;
-	stroke-dasharray: 339.292;
-	stroke-dashoffset: 339.292;
-    animation: 1.5s ease-in-out 1s forwards radial-progress;
-}
+		.progress__meter {
+			stroke: #e6e6e6;
+		}
+
+		.progress__value {
+			stroke: #fdca73;
+			stroke-dasharray: 339.292;
+			stroke-dashoffset: 339.292;
+			animation: 1.5s ease-in-out 1s forwards radial-progress;
+		}
+
+		.progress text {
+			fill: #e6e6e6;
+			text-transform: uppercase;
+		}
+
+		.progress__label-number {
+			font-size: 2.15em;
+		}
 
 .bar-chart,
 .bar-chart > svg {
@@ -295,4 +314,14 @@ body {
   border: 1px solid #6F257F;
   padding: 14px;
   text-align: center;
+}
+
+.radial-chart {
+	margin: 20px;
+}
+
+.interest,
+.skills,
+.experience {
+	margin-top: 22vh;
 }
