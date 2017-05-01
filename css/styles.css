@@ -44,10 +44,10 @@ a {
 }
 
 body {
-	display: flex;
-	flex-flow: row wrap;
+	/*display: flex;*/
+	/*flex-flow: row wrap;*/
 	height: 100vh;
-	padding: 3em 4em;
+	/*padding: 3em 4em;*/
 	/*background: rgb(61, 67, 115);*/
 	/*#1e2b44*/
 	background: radial-gradient(ellipse, #41495a 10%, #0c1629 100%);
@@ -59,6 +59,13 @@ body {
 .cover {
 	width: 100vw;
 	height: 100vh;
+	transition: all 3s;
+}
+
+.cover.animate {
+	height: 16.66vh;
+    padding: 0 4em;
+    transition: all 3s;
 }
 
 .home {
@@ -67,6 +74,20 @@ body {
     justify-content: space-between;
 	flex: 1 100%;
 	order: 2;
+	transition: all 3s;
+}
+
+.cover.animate .home {
+	flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 3em;
+	transition: all 3s;
+}
+
+.cover.animate .home > div {
+	text-align: left;
+	transition: all 3s;
 }
 
 	.home__title {
@@ -163,7 +184,9 @@ body {
 	height: 66vh;
     flex: 1 auto;
     order: 0;
+}
 
+.interests.animate {
 	animation: 1s ease-in-out forwards show-section--left;
 }
 
@@ -219,11 +242,13 @@ body {
 /* Skills */
 
 .skills {
-	animation: 1s ease-in-out forwards show-section--bottom;
-
 	height: 66vh;
     flex: 1 auto;
     order: 0;
+}
+
+.skills.animate {
+	animation: 1s ease-in-out forwards show-section--bottom;
 }
 
 	.radar-chart {
@@ -248,6 +273,9 @@ body {
     order: 2;
 
     text-align: right;
+}
+
+.experience.animate {
 	animation: 1s ease-in-out forwards show-section--right;
 }
 
@@ -320,8 +348,36 @@ body {
 	margin: 20px;
 }
 
-.interest,
-.skills,
-.experience {
-	margin-top: 22vh;
+.home {
+	display: flex;
+    align-items: center;
+    flex: 1 100%;
+    flex-direction: column;
+    height: 100%;
+    align-content: center;
+    justify-content: center;
+}
+
+.home > div {
+	text-align: center;
+    width: 460px;
+}
+
+.doom {
+	display: none;
+}
+
+.btn-see-more {
+	padding: 1em;
+    width: 12em;
+    border-radius: 2px;
+    background: deepskyblue;
+    text-align: center;
+    color: white;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    margin: 2em;
+    font-size: 15px;
+	transition: all 3s;
 }
