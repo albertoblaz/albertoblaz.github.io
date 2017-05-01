@@ -48,7 +48,9 @@ body {
 	flex-flow: row wrap;
 	height: 100vh;
 	padding: 3em 4em;
-	background: rgb(61, 67, 115);
+	/*background: rgb(61, 67, 115);*/
+	/*#1e2b44*/
+	background: radial-gradient(ellipse, #41495a 10%, #0c1629 100%);
 	color: white;
 }
 
@@ -76,13 +78,13 @@ body {
 
 	.home__subtitle {
     	margin-bottom: 1em;
-    	font-size: 1.1em;
+    	font-size: .9em;
+		opacity: .95;
 		text-transform: uppercase;
 	}
 
 	.home__description {
 		display: inline-block;
-		width: 350px;
 		font-size: 1em;
 	}
 
@@ -98,7 +100,7 @@ body {
 		}
 
 		.home__icon {
-			font-size: 1.5em;
+			font-size: 1.35em;
 			color: white;
 		}
 
@@ -133,22 +135,43 @@ body {
     order: 0;
 }
 
-	.bio-hobbies-icons {
+	.section-title {
+		color: #ececec;
+		text-transform: uppercase;
+		letter-spacing: 7px;
+		font-size: 1em;
+		margin-bottom: 1em;
+		margin-left: 0.5em;
+		display: inline-block;
+		opacity: .95;
+	}
+
+	.interests__icons {
 		display: flex;
 		flex-direction: column;
 		align-content: space-between;
 		line-height: 3em;
 	}
 
-		.hobbie {
-			font-size: 1.5em;
+		.interest {
 			display: flex;
 			align-items: center;
 		}
 
-			.hobbie i {
-				font-size: 1.25em;
+			.interest__icon {
+				/*font-size: 1.25em;
+				margin-right: 10px;*/
+				font-size: 1.35em;
 				margin-right: 10px;
+				margin-top: -3px;
+			}
+
+			.interest__name {
+				text-transform: uppercase;
+			}
+
+			.interest__name::first-letter {
+				font-size: 1.5em;
 			}
 
 /* Skills */
@@ -168,3 +191,15 @@ body {
     flex: 1 auto;
     order: 0;
 }
+
+	.radar-chart {
+		width: 100%;
+		height: 100%;
+		text-align: center;
+	}
+
+		.legend {
+			fill: white;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}

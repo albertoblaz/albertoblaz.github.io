@@ -25,7 +25,7 @@
         <div>
             <h1 class="home__title">Alberto Bl&aacute;zquez</h1>
             <h2 class="home__subtitle">Software Engineer and Frontend Developer</h2>
-            <p class="home__description">Love Functional Programming, Economics, History, Music, Movies and Videogames</p>
+            <p class="home__description">Passionate self-taught code-lover. Working in Stockholm, Sweden</p>
         </div>
 
         <nav class="home__icons">
@@ -40,54 +40,95 @@
     </div>
 
     <section class="interests">
-        <ul class="bio-hobbies-icons">
-            <li class="hobbie">
-                <i class="icon-note-beamed"></i>
-                <strong>Music</strong>
+        <h3 class="section-title">Interests</h3>
+        <ul class="interests__icons">
+            <li class="interest">
+                <i class="interest__icon icon-note-beamed"></i>
+                <strong class="interest__name">Music</strong>
             </li>
-            <li class="hobbie">
-                <i class="icon-movie"></i>
-                <strong>Movies</strong>
+            <li class="interest">
+                <i class="interest__icon icon-movie"></i>
+                <strong class="interest__name">Movies</strong>
             </li>
-            <li class="hobbie">
-                <i class="icon-camera-alt"></i>
-                <strong>History</strong>
+            <li class="interest">
+                <i class="interest__icon icon-camera-alt"></i>
+                <strong class="interest__name">History</strong>
             </li>
-            <li class="hobbie">
-                <i class="icon-soccer-ball"></i>
-                <strong>Sports</strong>
+            <li class="interest">
+                <i class="interest__icon icon-soccer-ball"></i>
+                <strong class="interest__name">Sports</strong>
             </li>
-            <li class="hobbie">
-                <i class="icon-gamepad"></i>
-                <strong>Videogames</strong>
+            <li class="interest">
+                <i class="interest__icon icon-gamepad"></i>
+                <strong class="interest__name">Videogames</strong>
             </li>
-            <li class="hobbie">
-                <i class="icon-food"></i>
-                <strong>Cooking</strong>
+            <li class="interest">
+                <i class="interest__icon icon-gamepad"></i>
+                <strong class="interest__name">Code</strong>
             </li>
-            <li class="hobbie">
-                <i class="icon-users"></i>
-                <strong>Economy</strong>
+            <li class="interest">
+                <i class="interest__icon icon-food"></i>
+                <strong class="interest__name">Cooking</strong>
+            </li>
+            <li class="interest">
+                <i class="interest__icon icon-users"></i>
+                <strong class="interest__name">Economy</strong>
             </li>
         </ul>
     </section>
 
     <section class="skills">
-        <figure>
-            graph
-        </figure>
+        <h3 class="section-title">Skills</h3>
+        <figure class="radar-chart"></figure>
 
-        <ul>
+        <!--<ul>
             <li>Functional Programming</li>
             <li>Frontend</li>
             <li>Backend</li>
             <li>Agile (Kanban and Scrum)</li>
             <li>UX</li>
-        </ul>
+        </ul>-->
     </section>
 
     <!-- JavaScript -->
     <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+
+    <script type="text/javascript" src="node_modules/d3/build/d3.min.js"></script>
+    <script type="text/javascript" src="js/radar-chart.js"></script>
+
+    <script>
+        const margin = {
+            top: 100,
+            right: 100,
+            bottom: 100,
+            left: 100
+        }
+        const w = Math.min(500, window.innerWidth - 10) - margin.left - margin.right
+        const h = Math.min(w, window.innerHeight - margin.top - margin.bottom - 20)
+
+        const data = [[
+            { axis: "Frontend", value: 0.95 },
+            { axis: "Backend", value: 0.58 },
+            { axis: "Agile (Kanban and Scrum)", value: 0.81 },
+            { axis: "User Experience", value: 0.78 },
+            { axis: "Mobile Development", value: 0.32 },
+            { axis: "Functional Programming", value: 0.83 },
+        ]]
+
+        const color = d3.scaleOrdinal([ '#EDC951', '#CC333F', '#00A0B0' ])
+
+        const radarChartOptions = {
+            w,
+            h,
+            margin,
+            color,
+            maxValue: 1,
+            levels: 5,
+            roundStrokes: true,
+        };
+        //Call function to draw the Radar chart
+        RadarChart('.radar-chart', data, radarChartOptions);
+    </script>
 </body>
 </html>
